@@ -1,3 +1,6 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "@mzrd/eslint-config",
+    "next/core-web-vitals"
+  ]
 }

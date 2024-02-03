@@ -1,10 +1,12 @@
-import Image from 'next/image'
+import Header from '@/components/Header'
 
 export default function Home() {
-  return (
-      <div className="z-10 max-w-5xl w-full">
-        
-      </div>
+    return (
+        <>
+            <Header />
+            <div className="container">
+            </div>
+        </>
     
-  )
+    )
 }
