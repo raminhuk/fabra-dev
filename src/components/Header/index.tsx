@@ -127,9 +127,7 @@ const Header = () => {
                                 </nav>
                             </div>
                         </div>
-                        <div>
-                            <Social/>
-                        </div>
+                        <Social/>
                     </div>
                 </div>
             </header>
