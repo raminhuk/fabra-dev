@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         description: 'Turning Ideas into Digital Reality: Fabio J.R, a Frontend Developer passionate about crafting elegant and functional interfaces to deliver exceptional user experiences',
         siteName: 'My Website',
         images: [{
-            url: '/assets/images/frontend-developer.png',
+            url: '/images/frontend-developer.png',
         }],
     },
     twitter: {

@@ -1,12 +1,17 @@
 'use client'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
+import { useEffect, useRef, useState } from 'react'
 
 import Logo from '../Logo'
 import Social from '../Social'
 import menuData from './menuData'
 
 const Header = () => {
+    const [position, setPosition] = useState({'width': '0px','left': '0px'})
+    const line = useRef<HTMLSpanElement | null>(null)
+    const pathname = usePathname()
+    
     // Navbar toggle
     const [navbarOpen, setNavbarOpen] = useState(false)
     const navbarToggleHandler = () => {
@@ -25,6 +30,37 @@ const Header = () => {
     useEffect(() => {
         window.addEventListener('scroll', handleStickyNavbar)
     })
+
+    useEffect(() => {
+        const linkInitial = document.querySelector(`nav [href='${pathname}']`) as HTMLAnchorElement
+        if (line.current && linkInitial) {
+            line.current.style.width = `${linkInitial.clientWidth}px`
+            line.current.style.transform = `translateX(${linkInitial.offsetLeft}px)`
+            setPosition(
+                {
+                    'width': linkInitial.clientWidth+'px',
+                    'left': linkInitial.offsetLeft+'px'
+                }
+            )
+        }
+       
+    }, [pathname])
+
+    const handleMouseOver = (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+        const linkTarget = event.currentTarget
+        if (line.current) {
+            line.current.style.width = `${linkTarget.clientWidth}px`
+            line.current.style.transform = `translateX(${linkTarget.offsetLeft}px)`
+            console.log(line.current.style)
+        }
+    }
+
+    const handleMouseOut = () => {
+        if (line.current) {
+            line.current.style.width = `${position.width}`
+            line.current.style.transform = `translateX(${position.left})`
+        }
+    }
 
     // submenu handler
     // const [openIndex, setOpenIndex] = useState(-1)
@@ -77,13 +113,25 @@ const Header = () => {
                                         : 'invisible top-[120%] opacity-0'
                                     }`}
                                 >
-                                    <ul className="block lg:flex lg:space-x-12">
+                                    
+                                
+                                   
+                                    <ul className="relative flex">
+                                        <span
+                                            ref={line}
+                                            className={`absolute bottom-0 left-0 h-1 w-0 bg-gradient-custom transition-all duration-500`}
+                                        >
+                                        </span>
                                         {menuData.map((menuItem, index) => (
-                                            <li key={index} className="group relative">
+                                            <li 
+                                                onMouseOver={handleMouseOver}
+                                                onMouseOut={handleMouseOut}
+                                                key={index} className="relative">
                                                 {menuItem.path ? (
                                                     <Link
+                                                        
                                                         href={menuItem.path}
-                                                        className={`flex py-4 text-base lg:mr-0 lg:inline-flex lg:px-2 lg:py-12`}
+                                                        className={`relative flex py-4 text-base lg:mr-0 lg:inline-flex lg:px-8 lg:py-10`}
                                                     >
                                                         {menuItem.title}
                                                     </Link>
