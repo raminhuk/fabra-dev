@@ -7,7 +7,7 @@ import Logo from '../Logo'
 import Social from '../Social'
 import menuData from './menuData'
 
-const Header = () => {
+export default function Header() {
     const [position, setPosition] = useState({'width': '0px','left': '0px'})
     const line = useRef<HTMLSpanElement | null>(null)
     const pathname = usePathname()
@@ -182,5 +182,3 @@ const Header = () => {
         </>
     )
 }
-
-export default Header
