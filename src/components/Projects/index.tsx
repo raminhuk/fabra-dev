@@ -18,14 +18,14 @@ export default function Projects() {
                         <figure>
                             <Image className="rounded" src={item.image}  width={1600} height={900} alt={item.title}/>
                         </figure>
-                        <div className="py-6">
+                        <div className="min-h-80 py-6">
                             <h3 className="pb-3 text-2xl font-semibold">{item.title}</h3>
-                            <div className="flex flex-wrap gap-2 pb-3">
+                            <p className="text-sm text-coldGrey">{item.description}</p>
+                            <div className="flex flex-wrap gap-2 py-4">
                                 {item.tech.map((tech, i) => (
                                     <span key={`tech-${i}`} className="rounded-full bg-slate-800 px-3 py-1 text-xs">{tech}</span>
                                 ))}
                             </div>
-                            <p className="min-h-32 text-sm text-coldGrey">{item.description}</p>
                         </div>
 
                         <div className="flex justify-between">
