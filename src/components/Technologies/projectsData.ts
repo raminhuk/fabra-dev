@@ -45,6 +45,49 @@ export const technologiesData: technologiesProps[] = [
         title: 'PostgreSQL, GraphQL & Prisma',
         score: 30
     },
+]
+
+export const additionalTechData: technologiesProps[] = [
+    {
+        title: 'Git, Github',
+        score: 100
+        
+    },
+    {
+        title: 'Testing',
+        score: 100
+        
+    },
+    {
+        title: 'Linters',
+        score: 100
+        
+    },
+    {
+        title: 'SEO',
+        score: 100
+        
+    },
+    {
+        title: 'UX/UI',
+        score: 100
+        
+    },
+    {
+        title: 'Wordpress',
+        score: 100
+        
+    },
    
+    {
+        title: 'APIs',
+        score: 100
+        
+    },
+    {
+        title: 'Google Ads',
+        score: 100
+        
+    },
     
 ]
