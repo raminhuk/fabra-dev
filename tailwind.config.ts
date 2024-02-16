@@ -9,12 +9,13 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                back: '#0F1624',
-                neon: '#00B2FF',
-                coldGrey: '#929EB0',
-                customPurple: 'rgba(148,93,214,1)',
-                customIndigo: 'rgba(105,120,209,1)',
-                customTeal: 'rgba(19,173,199,1)',
+                'back': '#0F1624',
+                'back-dark': '#0c121e',
+                'neon': '#00B2FF',
+                'coldGrey': '#929EB0',
+                'customPurple': 'rgba(148,93,214,1)',
+                'customIndigo': 'rgba(105,120,209,1)',
+                'customTeal': 'rgba(19,173,199,1)',
             },
             backgroundImage: {
                 'gradient-custom': 'linear-gradient(90deg, rgba(148,93,214,1) 0%, rgba(105,120,209,1) 55%, rgba(19,173,199,1) 100%)',

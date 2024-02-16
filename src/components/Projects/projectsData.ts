@@ -28,7 +28,7 @@ export const projectsData: projectsProps[] = [
     },
     {
         title: 'To-Do List: Manage Your Tasks Effortlessly',
-        description: 'This project is a user-friendly to-do list designed to help you manage your tasks effortlessly. Easily add, edit, and check off tasks to stay organized and focused. With a clean interface, you can prioritize your tasks and stay on top of your daily goals',
+        description: 'This project is a user-friendly to-do list designed to help you manage your tasks effortlessly. Easily add, edit, and check off tasks to stay organized and focused',
         image: '/images/projects/to-do-list.png',
         tech: ['React', 'JavaScript', 'Styled Components', 'ChakraUi'],
         linkPreview: 'https://tasks.fabra.dev',

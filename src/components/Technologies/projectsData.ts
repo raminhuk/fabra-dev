@@ -8,7 +8,7 @@ type technologiesProps = {
 export const technologiesData: technologiesProps[] = [
     {
         title: 'HTML, CSS, Sass, Less & Tailwind CSS',
-        score: 100
+        score: 90
         
     },
     {

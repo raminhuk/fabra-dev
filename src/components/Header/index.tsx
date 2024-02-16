@@ -21,7 +21,7 @@ export default function Header() {
     // Sticky Navbar
     const [sticky, setSticky] = useState(false)
     const handleStickyNavbar = () => {
-        if (window.scrollY >= 80) {
+        if (window.scrollY >= 120) {
             setSticky(true)
         } else {
             setSticky(false)
@@ -76,7 +76,7 @@ export default function Header() {
         <>
             <header
                 className={`w-full ${sticky
-                    ? 'fixed z-[9999] bg-white !bg-opacity-80 backdrop-blur-sm transition'
+                    ? 'fixed z-[9999] bg-back-dark !bg-opacity-80 backdrop-blur-sm transition'
                     : 'absolute max-lg:bg-indigo-50'
                 }`}
             >
