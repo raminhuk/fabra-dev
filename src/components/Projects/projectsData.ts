@@ -42,5 +42,21 @@ export const projectsData: projectsProps[] = [
         linkPreview: 'https://weather.fabra.dev',
         linkGithub: 'https://github.com/raminhuk/react-weather'
     },
+    {
+        title: 'A simple Tic Tac Toe application developed with React',
+        description: 'Crafted with React, this straightforward Tic Tac Toe application delivers an interactive and engaging experience for players of all ages.',
+        image: '/images/projects/tic-tac-toe.png',
+        tech: ['React', 'TypeScript', 'NextJs', 'TailwindCSS'],
+        linkPreview: 'https://tic-tac-toe.fabra.dev',
+        linkGithub: 'https://github.com/raminhuk/tic-tac-toe'
+    },
+    {
+        title: 'QRCode Generator in React',
+        description: 'Built using React, this QRCode Generator is a user-friendly tool that allows users to effortlessly create QR codes for various purposes.',
+        image: '/images/projects/qrcode.png',
+        tech: ['React', 'CSS', 'HTML', 'JavaScript'],
+        linkPreview: 'https://qrcode.fabra.dev',
+        linkGithub: 'https://github.com/raminhuk/react-code'
+    },
     
 ]

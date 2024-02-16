@@ -42,7 +42,7 @@ export default function AboutMe() {
             </div>
 
             <div className="flex flex-col gap-6">
-                <h3 className="text-2xl font-semibold">2021 - 2023</h3>
+                <h3 className="text-2xl font-semibold">2021 - 2024</h3>
                 <div className="relative">
                     <span className="absolute bottom-[-7px] left-[-7px] block size-5 rounded-full bg-gradient-custom shadow-md shadow-blue-500/50"></span>
                     <span className="block h-1 w-full bg-white"></span>
