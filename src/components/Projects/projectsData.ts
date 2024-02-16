@@ -43,10 +43,10 @@ export const projectsData: projectsProps[] = [
         linkGithub: 'https://github.com/raminhuk/react-weather'
     },
     {
-        title: 'A simple Tic Tac Toe application developed with React',
+        title: 'A simple Tic Tac Toe application',
         description: 'Crafted with React, this straightforward Tic Tac Toe application delivers an interactive and engaging experience for players of all ages.',
         image: '/images/projects/tic-tac-toe.png',
-        tech: ['React', 'TypeScript', 'NextJs', 'TailwindCSS'],
+        tech: ['React', 'TypeScript', 'NextJs', 'Tailwind'],
         linkPreview: 'https://tic-tac-toe.fabra.dev',
         linkGithub: 'https://github.com/raminhuk/tic-tac-toe'
     },

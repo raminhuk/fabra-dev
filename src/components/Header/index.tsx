@@ -77,7 +77,7 @@ export default function Header() {
             <header
                 className={`w-full ${sticky
                     ? 'fixed z-[9999] bg-back-dark !bg-opacity-80 backdrop-blur-sm transition'
-                    : 'absolute max-lg:bg-indigo-50'
+                    : 'absolute'
                 }`}
             >
                 <div className="container">
@@ -91,35 +91,32 @@ export default function Header() {
                                     onClick={navbarToggleHandler}
                                     id="navbarToggler"
                                     aria-label="Mobile Menu"
-                                    className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] focus:ring-2 lg:hidden"
+                                    className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] focus:ring-2 max-lg:z-[9999] lg:hidden"
                                 >
                                     <span
-                                        className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${navbarOpen ? ' top-[7px] rotate-45' : ' '
+                                        className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${navbarOpen ? ' top-[7px] rotate-45' : ' '
                                         }`}
                                     />
                                     <span
-                                        className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${navbarOpen ? 'opacity-0 ' : ' '
+                                        className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${navbarOpen ? 'opacity-0 ' : ' '
                                         }`}
                                     />
                                     <span
-                                        className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${navbarOpen ? ' top-[-8px] -rotate-45' : ' '
+                                        className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${navbarOpen ? ' top-[-8px] -rotate-45' : ' '
                                         }`}
                                     />
                                 </button>
                                 <nav
                                     id="navbarCollapse"
-                                    className={`absolute right-0 z-30 w-[250px] rounded border-[.5px] bg-white px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${navbarOpen
-                                        ? 'top-full opacity-100'
-                                        : 'invisible top-[120%] opacity-0'
+                                    className={`visible static w-auto max-lg:absolute max-lg:left-0 max-lg:top-0 max-lg:z-[999] max-lg:flex max-lg:h-screen max-lg:w-full max-lg:bg-back-dark max-lg:!bg-opacity-85 max-lg:p-0 max-lg:backdrop-blur-sm ${navbarOpen
+                                        ? 'opacity-100'
+                                        : 'invisible opacity-0'
                                     }`}
                                 >
-                                    
-                                
-                                   
-                                    <ul className="relative flex">
+                                    <ul className="relative flex max-lg:w-full max-lg:flex-col max-lg:items-center max-lg:justify-center">
                                         <span
                                             ref={line}
-                                            className={`absolute bottom-0 left-0 h-1 w-0 bg-gradient-custom transition-all duration-500`}
+                                            className={`absolute bottom-0 left-0 h-1 w-0 bg-gradient-custom transition-all duration-500 max-lg:hidden`}
                                         >
                                         </span>
                                         {menuData.map((menuItem, index) => (
@@ -131,7 +128,7 @@ export default function Header() {
                                                     <Link
                                                         
                                                         href={menuItem.path}
-                                                        className={`relative flex py-4 text-base lg:mr-0 lg:inline-flex lg:px-8 lg:py-10`}
+                                                        className="relative flex px-8 py-10 text-base max-xl:px-6 max-xl:py-8 max-lg:text-xl max-lg:font-semibold"
                                                     >
                                                         {menuItem.title}
                                                     </Link>
