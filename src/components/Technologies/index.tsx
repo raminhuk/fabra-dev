@@ -1,5 +1,5 @@
 import Title from '../Title'
-import { additionalTechData, technologiesData } from './projectsData'
+import { additionalTechData, technologiesData } from './TechData'
 
 export default function Technologies() {
     return <>

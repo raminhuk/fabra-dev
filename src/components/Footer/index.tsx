@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import menuData from '../Header/menuData'
 import Logo from '../Logo'
 import Social from '../Social'
 
@@ -11,18 +12,11 @@ export default function Footer() {
                     <Logo />
 
                     <ul className="flex flex-wrap items-center text-sm font-medium text-coldGrey">
-                        <li className="flex">
-                            <Link href="/about" className="p-2 hover:text-coldGrey lg:p-6">About</Link>
-                        </li>
-                        <li className="flex">
-                            <Link href="/privacy" className="p-2 hover:text-coldGrey lg:p-6">Privacy Policy</Link>
-                        </li>
-                        <li className="flex">
-                            <Link href="/faq" className="p-2 hover:text-coldGrey lg:p-6">Faq</Link>
-                        </li>
-                        <li className="flex">
-                            <Link href="/contact" className="p-2 hover:text-coldGrey lg:p-6">Contact</Link>
-                        </li>
+                        {menuData.map((menuItem, index) => (
+                            <li key={index} className="flex">
+                                <Link href={menuItem.path} className="p-2 hover:text-customIndigo lg:p-6">{menuItem.title}</Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
                 <div>

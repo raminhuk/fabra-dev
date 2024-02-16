@@ -27,7 +27,7 @@ export const projectsData: projectsProps[] = [
         linkGithub: 'https://github.com/raminhuk/unilcursos2'
     },
     {
-        title: 'To-Do List: Manage Your Tasks Effortlessly',
+        title: 'A simple to-do list app with React',
         description: 'This project is a user-friendly to-do list designed to help you manage your tasks effortlessly. Easily add, edit, and check off tasks to stay organized and focused',
         image: '/images/projects/to-do-list.png',
         tech: ['React', 'JavaScript', 'Styled Components', 'ChakraUi'],
@@ -35,28 +35,12 @@ export const projectsData: projectsProps[] = [
         linkGithub: 'https://github.com/raminhuk/react-todo-list'
     },
     {
-        title: 'Tunefy: Your Favorite Spotify Music Website',
-        description: 'Discover your top songs and artists, favorite genres, and relive recent listens in a unique and meaningful way',
-        image: '/images/projects/tunefy.png',
-        tech: ['Next', 'Tailwind', 'Axios', 'Zustand', 'Eslint'],
-        linkPreview: 'https://tunefy.fabra.dev',
-        linkGithub: 'https://github.com/raminhuk/tunefy'
-    },
-    {
-        title: 'Tunefy: Your Favorite Spotify Music Website',
-        description: 'Discover your top songs and artists, favorite genres, and relive recent listens in a unique and meaningful way',
-        image: '/images/projects/tunefy.png',
-        tech: ['Next', 'Tailwind', 'Axios', 'Zustand', 'Eslint'],
-        linkPreview: 'https://tunefy.fabra.dev',
-        linkGithub: 'https://github.com/raminhuk/tunefy'
-    },
-    {
-        title: 'Tunefy: Your Favorite Spotify Music Website',
-        description: 'Discover your top songs and artists, favorite genres, and relive recent listens in a unique and meaningful way',
-        image: '/images/projects/tunefy.png',
-        tech: ['Next', 'Tailwind', 'Axios', 'Zustand', 'Eslint'],
-        linkPreview: 'https://tunefy.fabra.dev',
-        linkGithub: 'https://github.com/raminhuk/tunefy'
+        title: 'A simple weather application developed with React',
+        description: 'A simple weather application developed with React, featuring real-time updates, customizable widgets',
+        image: '/images/projects/weather.png',
+        tech: ['React', 'JavaScript', 'Styled Components', 'Axios'],
+        linkPreview: 'https://weather.fabra.dev',
+        linkGithub: 'https://github.com/raminhuk/react-weather'
     },
     
 ]
