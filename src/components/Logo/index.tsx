@@ -9,8 +9,8 @@ const roboto = Roboto({
 
 export default function Logo(){
     return <>
-        <Link href="/">
-            <div className="flex items-center gap-2 bg-gradient-custom bg-clip-text text-transparent">
+        <Link className="flex max-lg:px-6 max-lg:pb-5 max-lg:pt-3" href="/">
+            <div className="flex items-end gap-2 bg-gradient-custom bg-clip-text text-transparent">
                 <span className={`${roboto.className} text-4xl font-bold`}>{`</>`}</span>
                 <span className="text-3xl font-bold">fabra.dev</span>
             </div>

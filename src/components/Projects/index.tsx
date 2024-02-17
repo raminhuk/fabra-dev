@@ -5,13 +5,13 @@ import Title from '../Title'
 import { projectsData } from './projectsData'
 
 export default function Projects() {
-    return <div>
+    return <div className="max-lg:px-8">
         <Title 
             title="Projects" 
             description="Discover my creative and innovative projects, spanning design to development, and see how I can add value to your next endeavor"
         />
 
-        <div className="grid grid-cols-3 gap-12">
+        <div className="grid grid-cols-3 gap-12 max-lg:grid-cols-2 max-sm:grid-cols-1">
             {projectsData?.map((item, i) => (
                 <div key={i} className="rounded-lg bg-gradient-custom p-[1px]">
                     <div className="min-h-[500px] rounded-lg bg-back p-8 max-xl:p-6">

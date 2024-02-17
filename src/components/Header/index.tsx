@@ -76,44 +76,44 @@ export default function Header() {
         <>
             <header
                 className={`w-full ${sticky
-                    ? 'fixed z-[9999] bg-back-dark !bg-opacity-80 backdrop-blur-sm transition'
-                    : 'absolute'
+                    ? 'fixed z-[9999] bg-back-dark !bg-opacity-80 backdrop-blur-sm transition max-lg:relative'
+                    : 'absolute max-lg:bg-back-dark'
                 }`}
             >
                 <div className="container">
                     <div className="relative flex items-center justify-between">
-                        <div>
+                        <div className="max-lg:order-2">
                             <Logo />
                         </div>
-                        <div className="flex items-center justify-between px-4">
+                        <div className="flex items-center justify-between px-4 max-lg:px-0">
                             <div>
                                 <button
                                     onClick={navbarToggleHandler}
                                     id="navbarToggler"
                                     aria-label="Mobile Menu"
-                                    className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] focus:ring-2 max-lg:z-[9999] lg:hidden"
+                                    className="relative block rounded-lg px-6 py-5 max-lg:z-[9999] lg:hidden"
                                 >
                                     <span
-                                        className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${navbarOpen ? ' top-[7px] rotate-45' : ' '
+                                        className={`relative my-1.5 block h-0.5 w-[27px] bg-gray-50 transition-all duration-300 ${navbarOpen ? ' top-[8px] rotate-45' : ' '
                                         }`}
                                     />
                                     <span
-                                        className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${navbarOpen ? 'opacity-0 ' : ' '
+                                        className={`relative my-1.5 block h-0.5 w-[27px] bg-gray-50 transition-all duration-300 ${navbarOpen ? 'opacity-0 ' : ' '
                                         }`}
                                     />
                                     <span
-                                        className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${navbarOpen ? ' top-[-8px] -rotate-45' : ' '
+                                        className={`relative my-1.5 block h-0.5 w-[27px] bg-gray-50 transition-all duration-300 ${navbarOpen ? ' top-[-8px] -rotate-45' : ' '
                                         }`}
                                     />
                                 </button>
                                 <nav
                                     id="navbarCollapse"
-                                    className={`visible static w-auto max-lg:absolute max-lg:left-0 max-lg:top-0 max-lg:z-[999] max-lg:flex max-lg:h-screen max-lg:w-full max-lg:bg-back-dark max-lg:!bg-opacity-85 max-lg:p-0 max-lg:backdrop-blur-sm ${navbarOpen
+                                    className={`visible w-auto  max-lg:absolute max-lg:left-0 max-lg:top-0 max-lg:z-[999] max-lg:flex max-lg:h-screen max-lg:w-full max-lg:bg-back-dark max-lg:!bg-opacity-85 max-lg:p-0 max-lg:backdrop-blur-sm ${navbarOpen
                                         ? 'opacity-100'
-                                        : 'invisible opacity-0'
+                                        : 'max-lg:invisible max-lg:opacity-0'
                                     }`}
                                 >
-                                    <ul className="relative flex max-lg:w-full max-lg:flex-col max-lg:items-center max-lg:justify-center">
+                                    <ul className={`relative flex max-lg:w-full max-lg:scale-0 max-lg:flex-col max-lg:items-center max-lg:justify-center max-lg:opacity-0 max-lg:transition-all max-lg:duration-700 ${navbarOpen ? 'max-lg:scale-100 max-lg:opacity-100' : ''}`}>
                                         <span
                                             ref={line}
                                             className={`absolute bottom-0 left-0 h-1 w-0 bg-gradient-custom transition-all duration-500 max-lg:hidden`}
@@ -123,12 +123,12 @@ export default function Header() {
                                             <li 
                                                 onMouseOver={handleMouseOver}
                                                 onMouseOut={handleMouseOut}
-                                                key={index} className="relative">
+                                                key={index} className="relative max-lg:flex max-lg:w-full">
                                                 {menuItem.path ? (
                                                     <Link
                                                         
                                                         href={menuItem.path}
-                                                        className="relative flex px-8 py-10 text-base max-xl:px-6 max-xl:py-8 max-lg:text-xl max-lg:font-semibold"
+                                                        className="relative flex px-8 py-10 text-base max-xl:px-6 max-xl:py-8 max-lg:w-full max-lg:justify-center max-lg:text-xl max-lg:font-semibold max-sm:p-5"
                                                     >
                                                         {menuItem.title}
                                                     </Link>

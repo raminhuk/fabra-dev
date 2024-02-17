@@ -36,11 +36,14 @@ const config: Config = {
                 'zoom-in-zoom-out': 'zoom-in-zoom-out 2.5s ease-in-out infinite',
                 'zoom-out-zoom-in': 'zoom-out-zoom-in 2.5s ease-in-out infinite',
             },
+            screens: {
+                xs: '480px',
+            }
         },
         container: {
             center: true,
             screens: {
-                xl: '1280px'
+                xl: '1280px',
             }
         },
     },
