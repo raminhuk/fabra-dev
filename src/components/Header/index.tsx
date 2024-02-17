@@ -77,7 +77,7 @@ export default function Header() {
             <header
                 className={`w-full ${sticky
                     ? 'fixed z-[9999] bg-back-dark !bg-opacity-80 backdrop-blur-sm transition max-lg:relative'
-                    : 'absolute max-lg:bg-back-dark'
+                    : 'absolute max-lg:relative max-lg:bg-back-dark'
                 }`}
             >
                 <div className="container">
@@ -113,7 +113,7 @@ export default function Header() {
                                         : 'max-lg:invisible max-lg:opacity-0'
                                     }`}
                                 >
-                                    <ul className={`relative flex max-lg:w-full max-lg:scale-0 max-lg:flex-col max-lg:items-center max-lg:justify-center max-lg:opacity-0 max-lg:transition-all max-lg:duration-700 ${navbarOpen ? 'max-lg:scale-100 max-lg:opacity-100' : ''}`}>
+                                    <ul className={`relative flex max-lg:w-full max-lg:scale-0 max-lg:flex-col max-lg:items-center max-lg:justify-center max-lg:opacity-0 max-lg:transition-all max-lg:duration-500 ${navbarOpen ? 'max-lg:scale-100 max-lg:opacity-100' : ''}`}>
                                         <span
                                             ref={line}
                                             className={`absolute bottom-0 left-0 h-1 w-0 bg-gradient-custom transition-all duration-500 max-lg:hidden`}

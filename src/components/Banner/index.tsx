@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Banner(){
     return <>
-        <div className="flex h-screen w-full items-center">
+        <div className="flex h-screen w-full items-center max-lg:h-[calc(100vh-72px)] max-lg:min-h-[520px]">
             <div className="container">
                 <div className="group relative w-full max-lg:mb-10 max-lg:px-10">
                     <div className="relative z-40 flex flex-col gap-10 max-lg:mb-10 max-lg:gap-5">
