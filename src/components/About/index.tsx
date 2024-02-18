@@ -2,7 +2,7 @@ import Title from '../Title'
 import { aboutData } from './aboutData'
 
 export default function AboutMe() {
-    return <div className="mt-36 max-lg:mt-20 max-lg:px-8 max-xs:px-6">
+    return <div className="py-16 max-lg:px-8 max-lg:py-10 max-xs:px-6">
         <Title 
             title="About me" 
             description="Crafting visually stunning and functional experiences - I'm a Frontend Developer passionate about turning ideas into digital reality"

@@ -3,13 +3,13 @@ import { additionalTechData, technologiesData } from './TechData'
 
 export default function Technologies() {
     return <>
-        <div className="mt-36 max-lg:mt-20 max-lg:px-8 max-xs:px-6">
+        <div className="py-16 max-lg:px-8 max-lg:py-10 max-xs:px-6">
             <Title 
                 title="Technologies" 
                 description="Discover my skills and experience in various technologies through my personal website, where I share insights and innovative solutions"
             />
 
-            <div className="flex flex-col gap-16 max-xs:gap-12">
+            <div className="flex flex-col gap-16 py-10 max-lg:my-10 max-xs:gap-12">
                 {technologiesData?.map((item, i) => (
                     <div key={i}>
                         <div className="flex items-center justify-between gap-5 pb-3">
@@ -23,7 +23,7 @@ export default function Technologies() {
                 ))}
             </div>
 
-            <div className="mt-36 max-lg:mt-20">
+            <div className="pt-20">
                 <Title 
                     title="Additional technologies and skills" 
                     description="Discover my additional skills and expertise, elevating projects to new heights of quality and efficiency."

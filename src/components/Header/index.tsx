@@ -38,13 +38,15 @@ export default function Header() {
 
     useEffect(() => {
         const linkInitial = document.querySelector(`nav [href='${pathname}']`) as HTMLAnchorElement
+        const liNav = linkInitial.closest('li')
+        console.log(linkInitial)
         if (line.current && linkInitial) {
-            line.current.style.width = `${linkInitial.clientWidth}px`
-            line.current.style.transform = `translateX(${linkInitial.offsetLeft}px)`
+            line.current.style.width = `${liNav?.clientWidth}px`
+            line.current.style.transform = `translateX(${liNav?.offsetLeft}px)`
             setPosition(
                 {
-                    'width': linkInitial.clientWidth+'px',
-                    'left': linkInitial.offsetLeft+'px'
+                    'width': liNav?.clientWidth+'px',
+                    'left': liNav?.offsetLeft+'px'
                 }
             )
         }
@@ -79,9 +81,9 @@ export default function Header() {
     return (
         <>
             <header
-                className={`w-full ${sticky
+                className={`w-full ${(sticky && pathname === '/')
                     ? 'fixed z-[9999] bg-back-dark !bg-opacity-80 backdrop-blur-sm transition max-lg:relative'
-                    : 'absolute max-lg:relative max-lg:bg-back-dark'
+                    : `${pathname === '/' ? 'absolute' : 'relative bg-back-dark'} max-lg:relative max-lg:bg-back-dark`
                 }`}
             >
                 <div className="container">

@@ -25,7 +25,7 @@ export default function Footer() {
                 <div className="flex justify-center py-4">
                     <Social />
                 </div>
-                <span className="block text-center text-sm text-coldGrey">© 2024 <Link href="/" className="hover:underline">Fabio J Raminhuk</Link>. All Rights Reserved.</span>
+                <span className="block text-center text-sm text-coldGrey">© 2024 Fabio J Raminhuk All Rights Reserved.</span>
             </div>
         </footer>
     )
