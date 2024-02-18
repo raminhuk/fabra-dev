@@ -42,8 +42,9 @@ const config: Config = {
         },
         container: {
             center: true,
+            padding: '20px',
             screens: {
-                xl: '1280px',
+                xl: '1300px',
             }
         },
     },

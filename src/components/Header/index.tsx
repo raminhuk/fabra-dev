@@ -17,9 +17,9 @@ export default function Header() {
     const navbarToggleHandler = () => {
         setNavbarOpen(!navbarOpen)
         if (!navbarOpen) {
-            document.body.style.overflow = 'hidden'
+            document.body.classList.add('max-lg:overflow-hidden')
         } else {
-            document.body.style.overflow = ''
+            document.body.classList.remove('max-lg:overflow-hidden')
         }
     }
 
@@ -86,7 +86,7 @@ export default function Header() {
                     : `${pathname === '/' ? 'absolute' : 'relative bg-back-dark'} max-lg:relative max-lg:bg-back-dark`
                 }`}
             >
-                <div className="container">
+                <div className="lg:container">
                     <div className="relative flex items-center justify-between">
                         <div className="max-lg:order-2">
                             <Logo />

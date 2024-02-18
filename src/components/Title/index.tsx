@@ -11,7 +11,7 @@ export default function Title({
 }: titleProps) {
     const TypeElement = type as keyof JSX.IntrinsicElements
     return <div className="mb-10 flex flex-col gap-4">
-        <TypeElement className="text-5xl font-semibold max-xl:text-3xl">{title}</TypeElement>
+        <TypeElement className="text-4xl font-semibold max-xl:text-3xl">{title}</TypeElement>
         <p className="max-w-2xl tracking-wide text-coldGrey max-xs:text-sm">{description}</p>
     </div>
 }

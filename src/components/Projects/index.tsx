@@ -1,16 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Title from '../Title'
 import { projectsData } from './projectsData'
 
-export default function Projects() {
-    return <div className="py-16 max-lg:px-8 max-lg:py-10 max-xs:px-6">
-        <Title 
-            title="Projects" 
-            description="Discover my creative and innovative projects, spanning design to development, and see how I can add value to your next endeavor"
-        />
 
+export default function Projects() {
+    return <div>
         <div className="grid grid-cols-3 gap-12 max-lg:grid-cols-2 max-sm:grid-cols-1 max-xs:gap-6">
             {projectsData?.map((item, i) => (
                 <div key={i} className="rounded-lg bg-gradient-custom p-[1px]">

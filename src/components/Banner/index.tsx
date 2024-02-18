@@ -5,7 +5,7 @@ export default function Banner(){
     return <>
         <div className="flex h-screen w-full items-center max-lg:h-[calc(100vh-72px)] max-lg:min-h-[620px] max-lg:items-start">
             <div className="container">
-                <div className="group relative w-full max-lg:mb-20 max-lg:px-10 max-xs:px-6">
+                <div className="group relative w-full max-lg:mb-20">
                     <div className="relative z-40 flex flex-col gap-10 max-lg:my-10 max-lg:gap-5">
                         <h1 className="flex flex-col items-start gap-4 text-6xl font-semibold max-lg:gap-2 max-lg:text-4xl max-xs:gap-2 max-xs:text-3xl">
                             <span className="bg-gradient-custom bg-clip-text text-transparent">Hello, I&apos;m Fabio J.R,</span>
