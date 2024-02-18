@@ -51,7 +51,6 @@ export default function Header() {
         if (line.current) {
             line.current.style.width = `${linkTarget.clientWidth}px`
             line.current.style.transform = `translateX(${linkTarget.offsetLeft}px)`
-            console.log(line.current.style)
         }
     }
 

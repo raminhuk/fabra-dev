@@ -19,7 +19,7 @@ export default function Banner(){
 
                     <div className="absolute right-0 top-0 max-lg:relative max-lg:flex max-lg:justify-center">
                         <div className="absolute -top-16 right-24 z-10 size-80 overflow-hidden rounded-full bg-gradient-custom p-0.5 shadow-xl shadow-blue-500/50 max-lg:relative max-lg:right-0 max-lg:top-0 max-lg:size-64">
-                            <Image className="h-auto w-full max-w-xs rounded-full" src="/images/fabio-developer.jpg" width="320" height="320" alt="Fabio Junior Raminhuk - Frontend Developer" quality={100}/>
+                            <Image priority className="h-auto w-full max-w-xs rounded-full" src="/images/fabio-developer.jpg" width="320" height="320" alt="Fabio Junior Raminhuk - Frontend Developer" quality={100}/>
                         </div>
 
                         <div className="absolute -top-5 right-48 size-[580px] animate-zoom-in-zoom-out rounded-full bg-gradient-custom p-[1px] max-lg:right-auto max-lg:top-0 max-lg:mr-[200px] max-lg:size-[350px] max-xs:size-[320px]">

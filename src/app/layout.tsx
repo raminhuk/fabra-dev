@@ -1,13 +1,13 @@
 import './globals.css'
 
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 
 const poppins = Poppins({ 
-    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+    weight: ['300', '400', '500', '600', '700', '800', '900'],
     style: ['normal', 'italic'],
     subsets: ['latin'],
 })
@@ -26,14 +26,16 @@ export const metadata: Metadata = {
         description: 'Turning Ideas into Digital Reality: Fabio J.R, a Frontend Developer passionate about crafting elegant and functional interfaces to deliver exceptional user experiences',
         siteName: 'My Website',
         images: [{
-            url: '/images/frontend-developer.png',
+            url: 'https://raw.githubusercontent.com/raminhuk/fabra-dev/master/public/images/frontend-developer.png',
         }],
     },
     twitter: {
         site: '@fabio_rmk',
     },
-    themeColor: '#0c121e'
+}
 
+export const viewport: Viewport = {
+    themeColor: '#0c121e'
 }
 
 export default function RootLayout({
