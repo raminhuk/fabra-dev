@@ -16,6 +16,11 @@ export default function Header() {
     const [navbarOpen, setNavbarOpen] = useState(false)
     const navbarToggleHandler = () => {
         setNavbarOpen(!navbarOpen)
+        if (!navbarOpen) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = ''
+        }
     }
 
     // Sticky Navbar
