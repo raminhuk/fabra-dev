@@ -1,7 +1,7 @@
 interface titleProps {
-    title?: string;
+    title: string;
     description: string;
-    type: string;
+    type?: string;
 }
 
 export default function Title({
