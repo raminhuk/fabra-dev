@@ -31,7 +31,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         site: '@fabio_rmk',
-    }
+    },
+    themeColor: '#0c121e'
 
 }
 
