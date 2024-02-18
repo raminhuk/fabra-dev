@@ -7,7 +7,7 @@ export default function Banner(){
             <div className="container">
                 <div className="group relative w-full max-lg:mb-20 max-lg:px-10 max-xs:px-6">
                     <div className="relative z-40 flex flex-col gap-10 max-lg:my-10 max-lg:gap-5">
-                        <h1 className="flex flex-col items-start gap-4 text-6xl font-semibold max-lg:gap-2 max-lg:text-4xl max-xs:gap-0 max-xs:text-3xl">
+                        <h1 className="flex flex-col items-start gap-4 text-6xl font-semibold max-lg:gap-2 max-lg:text-4xl max-xs:gap-2 max-xs:text-3xl">
                             <span className="bg-gradient-custom bg-clip-text text-transparent">Hello, I&apos;m Fabio J.R,</span>
                             <span>Frontend developer</span>
                         </h1>
