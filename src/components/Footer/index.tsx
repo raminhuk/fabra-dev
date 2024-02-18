@@ -11,7 +11,7 @@ export default function Footer() {
                 <div className="flex flex-col items-center justify-between lg:flex-row">
                     <Logo />
 
-                    <ul className="flex flex-wrap items-center text-sm font-medium text-coldGrey">
+                    <ul className="flex flex-wrap items-center text-sm font-medium text-coldGrey max-lg:justify-center">
                         {menuData.map((menuItem, index) => (
                             <li key={index} className="flex">
                                 <Link href={menuItem.path} className="p-2 hover:text-customIndigo lg:p-6">{menuItem.title}</Link>

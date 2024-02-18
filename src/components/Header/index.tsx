@@ -113,7 +113,7 @@ export default function Header() {
                                         : 'max-lg:invisible max-lg:opacity-0'
                                     }`}
                                 >
-                                    <ul className={`relative flex max-lg:w-full max-lg:scale-0 max-lg:flex-col max-lg:items-center max-lg:justify-center max-lg:opacity-0 max-lg:transition-all max-lg:duration-500 ${navbarOpen ? 'max-lg:scale-100 max-lg:opacity-100' : ''}`}>
+                                    <ul className={`relative flex max-lg:w-full max-lg:flex-col max-lg:items-center max-lg:justify-center max-lg:opacity-0 max-lg:transition-all max-lg:duration-500 ${navbarOpen ? 'max-lg:scale-100 max-lg:opacity-100' : 'max-lg:scale-50'}`}>
                                         <span
                                             ref={line}
                                             className={`absolute bottom-0 left-0 h-1 w-0 bg-gradient-custom transition-all duration-500 max-lg:hidden`}

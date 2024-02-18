@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export default function Banner(){
     return <>
-        <div className="flex h-screen w-full items-center max-lg:h-[calc(100vh-72px)] max-lg:min-h-[520px]">
+        <div className="flex h-screen w-full items-center max-lg:h-[calc(100vh-72px)] max-lg:min-h-[600px]">
             <div className="container">
-                <div className="group relative w-full max-lg:mb-10 max-lg:px-10">
-                    <div className="relative z-40 flex flex-col gap-10 max-lg:mb-10 max-lg:gap-5">
-                        <h1 className="flex flex-col items-start gap-4 text-6xl font-semibold max-lg:gap-2 max-lg:text-4xl max-xs:gap-0 max-xs:text-2xl">
+                <div className="group relative w-full max-lg:mb-10 max-lg:px-10 max-xs:px-6">
+                    <div className="relative z-40 flex flex-col gap-10 max-lg:mb-8 max-lg:gap-5">
+                        <h1 className="flex flex-col items-start gap-4 text-6xl font-semibold max-lg:gap-2 max-lg:text-4xl max-xs:gap-0 max-xs:text-3xl">
                             <span className="bg-gradient-custom bg-clip-text text-transparent">Hello, I&apos;m Fabio J.R,</span>
                             <span>Frontend developer</span>
                         </h1>
@@ -22,11 +22,11 @@ export default function Banner(){
                             <Image className="h-auto w-full max-w-xs rounded-full" src="/images/fabio-developer.jpg" width="320" height="320" alt="Fabio Junior Raminhuk - Frontend Developer" quality={100}/>
                         </div>
 
-                        <div className="absolute -top-5 right-48 size-[580px] animate-zoom-in-zoom-out rounded-full bg-gradient-custom p-[1px] max-lg:right-auto max-lg:top-0 max-lg:mr-[200px] max-lg:size-[350px]">
+                        <div className="absolute -top-5 right-48 size-[580px] animate-zoom-in-zoom-out rounded-full bg-gradient-custom p-[1px] max-lg:right-auto max-lg:top-0 max-lg:mr-[200px] max-lg:size-[350px] max-xs:size-[320px]">
                             <div className="size-full rounded-full bg-back"></div>
                         </div>
 
-                        <div className="absolute right-0 top-32 size-56 animate-zoom-out-zoom-in rounded-full bg-gradient-custom shadow-lg shadow-blue-500/50 max-lg:right-auto max-lg:top-40 max-lg:ml-[200px] max-lg:size-40">
+                        <div className="absolute right-0 top-32 size-56 animate-zoom-out-zoom-in rounded-full bg-gradient-custom shadow-lg shadow-blue-500/50 max-lg:right-auto max-lg:top-40 max-lg:ml-[200px] max-lg:size-40 max-xs:ml-[120px]">
                         </div>
                     </div>
                 </div>

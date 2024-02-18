@@ -3,28 +3,27 @@ import { additionalTechData, technologiesData } from './TechData'
 
 export default function Technologies() {
     return <>
-        <div className="mt-36">
+        <div className="mt-36 max-lg:mt-20 max-lg:px-8 max-xs:px-6">
             <Title 
                 title="Technologies" 
                 description="Discover my skills and experience in various technologies through my personal website, where I share insights and innovative solutions"
             />
 
-            <div className="flex flex-col gap-16">
+            <div className="flex flex-col gap-16 max-xs:gap-12">
                 {technologiesData?.map((item, i) => (
                     <div key={i}>
-                        <div className="flex items-center justify-between pb-3">
-                            <h3 className="text-2xl font-semibold">{item.title}</h3>
-                            <p>{item?.score >= 90 ? 'Advanced' : item?.score >= 60 && item?.score < 90 ? 'Intermediate' : item?.score > 40 && item?.score < 60 ? 'Regular' : 'Beginner'}</p>
+                        <div className="flex items-center justify-between gap-5 pb-3">
+                            <h3 className="text-2xl font-semibold max-lg:text-base">{item.title}</h3>
+                            <p className="max-xs:text-xs">{item?.score >= 90 ? 'Advanced' : item?.score >= 60 && item?.score < 90 ? 'Intermediate' : item?.score > 40 && item?.score < 60 ? 'Regular' : 'Beginner'}</p>
                         </div>
                         <div className="w-full rounded-full bg-back-dark">
-
-                            <span className="block h-4 rounded-full bg-gradient-custom shadow-md shadow-blue-500/50" style={{width: item.score+'%'}}></span>
+                            <span className="block h-4 rounded-full bg-gradient-custom shadow-md shadow-blue-500/50 max-lg:h-3" style={{width: item.score+'%'}}></span>
                         </div>
                     </div>
                 ))}
             </div>
 
-            <div className="mt-36">
+            <div className="mt-36 max-lg:mt-20">
                 <Title 
                     title="Additional technologies and skills" 
                     description="Discover my additional skills and expertise, elevating projects to new heights of quality and efficiency."
@@ -34,7 +33,7 @@ export default function Technologies() {
                     {additionalTechData?.map((item, i) => (
                         <div key={i} className="flex items-center gap-4">
                             <span className="block size-4 rounded-full bg-gradient-custom shadow-md shadow-blue-500/50" ></span>
-                            <h4 className="text-2xl font-semibold">{item.title}</h4>
+                            <h4 className="text-2xl font-semibold max-lg:text-lg">{item.title}</h4>
                         </div>
                     ))}
                 </div>
