@@ -132,7 +132,7 @@ export default function Header() {
                                                 key={index} className="relative max-lg:flex max-lg:w-full">
                                                 {menuItem.path ? (
                                                     <Link
-                                                        
+                                                        onClick={navbarToggleHandler}
                                                         href={menuItem.path}
                                                         className="relative flex px-8 py-10 text-base max-xl:px-6 max-xl:py-8 max-lg:w-full max-lg:justify-center max-lg:text-xl max-lg:font-semibold max-sm:p-5"
                                                     >
