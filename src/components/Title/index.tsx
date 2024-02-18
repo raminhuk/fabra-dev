@@ -1,14 +1,17 @@
 interface titleProps {
-    title: string,
-    description: string
+    title?: string;
+    description: string;
+    type: string;
 }
 
 export default function Title({
     title,
-    description
+    description,
+    type = 'h2',
 }: titleProps) {
+    const TypeElement = type as keyof JSX.IntrinsicElements
     return <div className="mb-10 flex flex-col gap-4">
-        <h2 className="text-5xl font-semibold max-xl:text-3xl">{title}</h2>
+        <TypeElement className="text-5xl font-semibold max-xl:text-3xl">{title}</TypeElement>
         <p className="max-w-2xl tracking-wide text-coldGrey max-xs:text-sm">{description}</p>
     </div>
 }
