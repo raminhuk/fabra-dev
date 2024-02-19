@@ -4,7 +4,7 @@ import { additionalTechData, technologiesData } from './TechData'
 export default function Technologies() {
     return <>
         <div>
-            <div className="flex flex-col gap-16 py-10 max-lg:my-10 max-xs:gap-12">
+            <div className="flex flex-col gap-16 max-xs:gap-12">
                 {technologiesData?.map((item, i) => (
                     <div key={i}>
                         <div className="flex items-center justify-between gap-5 pb-3">
