@@ -38,6 +38,7 @@ export default function Header() {
 
     useEffect(() => {
         const linkInitial = document.querySelector(`nav [href='${pathname}']`) as HTMLAnchorElement
+        if (!linkInitial) return
         const liNav = linkInitial.closest('li')
         console.log(linkInitial)
         if (line.current && linkInitial) {
