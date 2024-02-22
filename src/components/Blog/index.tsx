@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { Post } from '@/app/blog/page'
 
 export default function Posts({ posts } : { posts?: Post[] }) {
-    console.log(posts)
     return (
         <div className="py-20">
             <h1 className="mb-10 text-4xl font-bold">BLOG</h1>
