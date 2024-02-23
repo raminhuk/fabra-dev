@@ -1,23 +1,33 @@
+import Image from 'next/image'
 import { NotionRenderer } from 'react-notion'
 
+import { BlogPost } from '@/@types/blog'
 import { getAllPosts, getPosts } from '@/utils/api/splitbeeApi'
 
-import { Post } from '../page'
 
 export default async function PostBlog({ params }: { params: { slug: string } }) {
     try {
         const posts = await getAllPosts()
-        const post: Post | undefined = posts.find((t: Post) => t.slug === params.slug)
+        const post: BlogPost | undefined = posts.find((t: BlogPost) => t.slug === params.slug)
 
         if (!post) {
-            throw new Error(`Post with slug '${params.slug}' not found`)
+            return <>
+                Page not found
+            </>
         }
         const pagePost = await getPosts(post.id)
 
         return (
-            <div>
+            <div className="container max-w-[900px]">
                 <h1>{post.title}</h1>
-                <NotionRenderer blockMap={pagePost} />
+                {post.image ? (
+                    <Image className="h-[220px] object-cover" src={post.image[0].url} alt={post.image[0].name} width={400} height={220}/>
+                ) : (
+                    <div className="h-[220px] w-full bg-slate-800"></div>
+                )}
+                <div className="text-xl text-coldGrey">
+                    <NotionRenderer blockMap={pagePost} />
+                </div>
             </div>
         )
     } catch (error) {
