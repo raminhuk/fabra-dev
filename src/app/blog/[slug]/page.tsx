@@ -16,7 +16,7 @@ export default async function PostBlog({ params }: { params: { slug: string } })
         const pagePost = await getPosts(post.id)
 
         return (
-            <div className="container max-w-[900px]">
+            <div className="container max-w-[1000px]">
                 <h1>{post.title}</h1>
                 {post.image ? (
                     <Image className="h-[220px] object-cover" src={post.image[0].url} alt={post.image[0].name} width={400} height={220}/>
