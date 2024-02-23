@@ -11,9 +11,7 @@ export default async function PostBlog({ params }: { params: { slug: string } })
         const post: BlogPost | undefined = posts.find((t: BlogPost) => t.slug === params.slug)
 
         if (!post) {
-            return <>
-                Page not found
-            </>
+            throw new Error(`Page not found`)
         }
         const pagePost = await getPosts(post.id)
 
