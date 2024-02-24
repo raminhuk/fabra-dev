@@ -18,7 +18,7 @@ export default function TechnologiesPage() {
                         title="Technologies" 
                         description="Discover my skills and experience in various technologies through my personal website, where I share insights and innovative solutions"
                     />
-                    <div className="tracking-wide text-coldGrey max-xs:text-sm">
+                    <div>
                         <Technologies />
                     </div>
                 </div>

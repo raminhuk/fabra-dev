@@ -34,7 +34,7 @@ export const generateMetadata = async (
     }
 }
 
-export default async function PostBlog({ params }: { params: { slug: string } }) {
+export default async function PostBlog({ params }: Props) {
     try {
         const posts = await getAllPosts()
         const post: BlogPost | undefined = posts.find((t: BlogPost) => t.slug === params.slug)

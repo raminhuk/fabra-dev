@@ -37,10 +37,13 @@ export default function Header() {
     })
 
     useEffect(() => {
-        const linkInitial = document.querySelector(`nav [href='${pathname}']`) as HTMLAnchorElement
+        const lastSlashIndex = pathname.lastIndexOf('/')
+        const result = lastSlashIndex !== -1 && lastSlashIndex !== 0 ? pathname.substring(0, lastSlashIndex) : pathname
+
+        const linkInitial = document.querySelector(`nav [href='${result}']`) as HTMLAnchorElement
+        
         if (!linkInitial) return
         const liNav = linkInitial.closest('li')
-        console.log(linkInitial)
         if (line.current && linkInitial) {
             line.current.style.width = `${liNav?.clientWidth}px`
             line.current.style.transform = `translateX(${liNav?.offsetLeft}px)`
