@@ -1,6 +1,7 @@
 import '../../../NotionStyle/styles.css'
 import 'prismjs/themes/prism-tomorrow.css'
 
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { NotionRenderer } from 'react-notion'
@@ -8,6 +9,30 @@ import { NotionRenderer } from 'react-notion'
 import { BlogPost } from '@/@types/blog'
 import { getAllPosts, getPosts } from '@/utils/api/splitbeeApi'
 import { formateData } from '@/utils/formatDate'
+
+type Props = {
+    params: { slug: string };
+  };
+
+export const generateMetadata = async (
+    props: Props
+): Promise<Metadata> => {
+    const { params } = props
+    const posts = await getAllPosts()
+    const post: BlogPost | undefined = posts.find((t: BlogPost) => t.slug === params.slug)
+    return {
+        title: post?.title,
+        description: post?.description,
+        openGraph: {
+            title: post?.title,
+            description: post?.description,
+            siteName: 'My Website',
+            images: [{
+                url: post?.image[0].url ? post?.image[0].url : '',
+            }],
+        },
+    }
+}
 
 export default async function PostBlog({ params }: { params: { slug: string } }) {
     try {
