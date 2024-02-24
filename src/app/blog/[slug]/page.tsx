@@ -30,6 +30,10 @@ export default async function PostBlog({ params }: { params: { slug: string } })
         )
     } catch (error) {
         console.error('Error fetching post data:', error)
-        return <div>Pagina não encontrada</div>
+        return (
+            <div className="flex min-h-screen items-center justify-center">
+                <div>Pagina não encontrada</div>
+            </div>
+        )
     }
 }

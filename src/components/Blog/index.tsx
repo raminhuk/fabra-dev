@@ -23,7 +23,7 @@ export default function Posts({ posts } : { posts?: BlogPost[] }) {
                             <div className="flex flex-wrap gap-2">
                                 {post.tags && (
                                     post.tags.map((tag) => (
-                                        <span key={tag} className="rounded-full bg-slate-800 px-[10px] py-1 text-xs max-lg:text-[9px]">{tag}</span>
+                                        <span key={tag} className="rounded-full border-[1px] border-solid border-customIndigo/80 bg-customIndigo/20 px-[10px] py-1 text-xs max-lg:text-[9px]">{tag}</span>
                                     ))
                                 )}
                             </div>
