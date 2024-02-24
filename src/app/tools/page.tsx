@@ -1,32 +1,31 @@
 'use client'
-import React, { useState } from 'react'
 
 const BorderRadiusGenerator: React.FC = () => {
-    const [topLeft, setTopLeft] = useState<number>(0)
-    const [topRight, setTopRight] = useState<number>(0)
-    const [bottomRight, setBottomRight] = useState<number>(0)
-    const [bottomLeft, setBottomLeft] = useState<number>(0)
+    // const [topLeft, setTopLeft] = useState<number>(0)
+    // const [topRight, setTopRight] = useState<number>(0)
+    // const [bottomRight, setBottomRight] = useState<number>(0)
+    // const [bottomLeft, setBottomLeft] = useState<number>(0)
 
-    const handleChange = (setter: (val: number) => void) => (
-        event: React.ChangeEvent<HTMLInputElement>
-    ) => {
-        const value = parseInt(event.target.value)
-        setter(value)
-    }
+    // const handleChange = (setter: (val: number) => void) => (
+    //     event: React.ChangeEvent<HTMLInputElement>
+    // ) => {
+    //     const value = parseInt(event.target.value)
+    //     setter(value)
+    // }
 
-    const borderRadiusStyle = {
-        borderRadius: `${topLeft}px ${topRight}px ${bottomRight}px ${bottomLeft}px`,
-    }
+    // const borderRadiusStyle = {
+    //     borderRadius: `${topLeft}px ${topRight}px ${bottomRight}px ${bottomLeft}px`,
+    // }
 
-    const cssCode = `border-radius: ${topLeft}px ${topRight}px ${bottomRight}px ${bottomLeft}px;`
+    // const cssCode = `border-radius: ${topLeft}px ${topRight}px ${bottomRight}px ${bottomLeft}px;`
 
-    const copyToClipboard = () => {
-        navigator.clipboard.writeText(cssCode)
-    }
+    // const copyToClipboard = () => {
+    //     navigator.clipboard.writeText(cssCode)
+    // }
 
     return (
         <div>
-            <div style={borderRadiusStyle}></div>
+            {/* <div style={borderRadiusStyle}></div>
             <div>
                 <label>Top Left:</label>
                 <input type="number" value={topLeft} onChange={handleChange(setTopLeft)} />
@@ -43,7 +42,9 @@ const BorderRadiusGenerator: React.FC = () => {
                 <label>Bottom Left:</label>
                 <input type="number" value={bottomLeft} onChange={handleChange(setBottomLeft)} />
             </div>
-            <button onClick={copyToClipboard}>Copy CSS Code</button>
+            <button onClick={copyToClipboard}>Copy CSS Code</button> */}
+
+            building
         </div>
     )
 }

@@ -9,7 +9,7 @@ export default function Posts({ posts } : { posts?: BlogPost[] }) {
     return (
         <div className="grid grid-cols-3 gap-12 max-lg:grid-cols-2 max-sm:grid-cols-1">
             {posts?.map((post) => (
-                <Link key={post.id} href={`/blog/${post.slug}`}>
+                <Link className="group/item" key={post.id} href={`/blog/${post.slug}`}>
                     <div className="overflow-hidden rounded-xl bg-back-dark">
                         <figure>
                             {post.image ? (
@@ -19,7 +19,7 @@ export default function Posts({ posts } : { posts?: BlogPost[] }) {
                             )}
                         </figure>
                         <div className="flex flex-col gap-3 px-7 py-5">
-                            <h2 className="text-xl font-medium">{post.title}</h2>
+                            <h2 className="flex min-h-[84px] items-center bg-gray-200 bg-clip-text text-xl font-bold text-transparent transition-all group-hover/item:bg-gradient-custom">{post.title}</h2>
                             <div className="flex flex-wrap gap-2">
                                 {post.tags && (
                                     post.tags.map((tag) => (

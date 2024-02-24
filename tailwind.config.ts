@@ -13,9 +13,9 @@ const config: Config = {
                 'back-dark': '#0c121e',
                 'neon': '#00B2FF',
                 'coldGrey': '#929EB0',
-                'customPurple': 'rgba(148,93,214,1)',
-                'customIndigo': 'rgba(105,120,209,1)',
-                'customTeal': 'rgba(19,173,199,1)',
+                'customPurple': '#945dd6',
+                'customIndigo': '#6978d1',
+                'customTeal': '#13adc7',
             },
             backgroundImage: {
                 'gradient-custom': 'linear-gradient(90deg, rgba(148,93,214,1) 0%, rgba(105,120,209,1) 55%, rgba(19,173,199,1) 100%)',
