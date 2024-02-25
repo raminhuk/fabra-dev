@@ -5,7 +5,11 @@ import Title from '@/components/Title'
 
 export const metadata: Metadata = {
     title: 'Technologies - Fabio J. Raminhuk',
-    description: 'Discover my skills and experience in various technologies through my personal website, where I share insights and innovative solutions',
+    description: 'Explore dynamic and responsive projects crafted with React, Next.js, HTML, CSS, JavaScript, TypeScript, PostgreSQL, GraphQL, and more. Optimized for SEO, with integrations for Wordpress, Google Ads, and APIs',
+    openGraph: {
+        title: 'Technologies - Fabio J. Raminhuk',
+        description: 'Explore dynamic and responsive projects crafted with React, Next.js, HTML, CSS, JavaScript, TypeScript, PostgreSQL, GraphQL, and more. Optimized for SEO, with integrations for Wordpress, Google Ads, and APIs',
+    },
 }
 
 export default function TechnologiesPage() {

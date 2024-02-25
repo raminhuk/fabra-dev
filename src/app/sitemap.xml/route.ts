@@ -6,29 +6,50 @@ const URL = 'https://fabra.dev'
 
 function generateSiteMap(posts: BlogPost[]) {
     return `<?xml version="1.0" encoding="UTF-8"?>
-   <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-     <url>
-       <loc>${URL}</loc>
-     </url>
-     <url>
-       <loc>${URL}/about-me</loc>
-     </url>
-      <url>
-       <loc>${URL}/projects</loc>
-     </url>
-      <url>
-       <loc>${URL}/technologies</loc>
-     </url>
-      <url>
-       <loc>${URL}/tools</loc>
-     </url>
-      <url>
-       <loc>${URL}/blog</loc>
-     </url>
-     ${posts.map(({ slug }) => {
+    <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>${URL}</loc>
+      <lastmod>2024-02-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    <url>
+      <loc>${URL}/about-me</loc>
+      <lastmod>2024-02-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    <url>
+      <loc>${URL}/projects</loc>
+      <lastmod>2024-02-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    <url>
+      <loc>${URL}/technologies</loc>
+      <lastmod>2024-02-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    <url>
+      <loc>${URL}/tools</loc>
+      <lastmod>2024-02-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    <url>
+      <loc>${URL}/blog</loc>
+      <lastmod>2024-02-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+    </url>
+     ${posts.map(({ slug,date }) => {
         return `
            <url>
-               <loc>${`${URL}/blog/${slug}`}</loc>
+                <loc>${`${URL}/blog/${slug}`}</loc>
+                <lastmod>${date}</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>0.5</priority>
            </url>
          `
     }).join('')}

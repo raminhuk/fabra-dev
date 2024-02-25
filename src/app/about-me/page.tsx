@@ -6,9 +6,12 @@ import Title from '@/components/Title'
 
 export const metadata: Metadata = {
     title: 'About Me - Fabio J. Raminhuk',
-    description: 'Meet Fabio J. Raminhuk, a passionate frontend developer with expertise in various technologies. Learn about his education, skills, and dedication to staying updated with the latest trends in the industry',
+    description: 'Turning Ideas into Digital Reality: Fabio J.R, a Frontend Developer passionate about crafting elegant and functional interfaces to deliver exceptional user experiences',
+    openGraph: {
+        title: 'About Me - Fabio J. Raminhuk',
+        description: 'Meet Fabio J. Raminhuk, a passionate frontend developer with expertise in various technologies. Learn about his education, skills, and dedication to staying updated with the latest trends in the industry',
+    },
 }
-
 
 export default function AboutPage() {
     return (

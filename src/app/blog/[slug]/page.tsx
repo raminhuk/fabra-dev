@@ -26,7 +26,6 @@ export const generateMetadata = async (
         openGraph: {
             title: post?.title,
             description: post?.description,
-            siteName: 'My Website',
             images: [{
                 url: post?.image[0].url ? post?.image[0].url : '',
             }],
@@ -38,7 +37,7 @@ export default async function PostBlog({ params }: Props) {
     try {
         const posts = await getAllPosts()
         const post: BlogPost | undefined = posts.find((t: BlogPost) => t.slug === params.slug)
-        const datePost = formateData(post?.date ? post?.date : '2024-01-23')
+        const datePost = formateData(post?.date ? post?.date : '2024-02-23')
         if (!post) {
             throw new Error(`Page not found`)
         }

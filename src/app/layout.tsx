@@ -1,5 +1,6 @@
 import './globals.css'
 
+import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata, Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 
@@ -38,6 +39,8 @@ export const viewport: Viewport = {
     themeColor: '#0c121e'
 }
 
+export const GA_TRACKING_ID: string = 'G-CSXQC9RNJD'
+
 export default function RootLayout({
     children,
 }: {
@@ -50,6 +53,7 @@ export default function RootLayout({
                 {children}
                 <Footer />
             </body>
+            <GoogleAnalytics gaId={GA_TRACKING_ID} />
         </html>
     )
 }
