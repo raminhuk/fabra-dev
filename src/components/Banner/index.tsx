@@ -1,7 +1,6 @@
-'use client'
-
-import { sendGTMEvent } from '@next/third-parties/google'
 import Image from 'next/image'
+
+import { ButtonDownload } from '../ButtonDownload'
 
 export default function Banner(){
     return <>
@@ -15,7 +14,7 @@ export default function Banner(){
                         </h1>
                         <p className="max-w-2xl tracking-wide text-coldGrey max-xs:text-sm">Turning Ideas into Digital Reality: Fabio J.R, a Frontend Developer passionate about crafting elegant and functional interfaces to deliver exceptional user experiences.</p>
                         <div className="flex max-lg:hidden">
-                            <button onClick={() => sendGTMEvent({ event: 'download_cv', value: 'Download CV' })} className="rounded-full bg-blue-500 bg-gradient-custom px-8 py-4 text-sm shadow-lg shadow-blue-500/50">Download CV</button>
+                            <ButtonDownload />
                         </div>
                     </div>
 
