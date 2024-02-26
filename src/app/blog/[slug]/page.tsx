@@ -45,28 +45,28 @@ export default async function PostBlog({ params }: Props) {
 
         return (
             <div>
-                <div className="relative flex h-[400px] w-full overflow-hidden max-lg:h-[300px]">
+                <div className="relative flex h-[450px] w-full overflow-hidden max-lg:h-[300px] max-md:h-[260px]">
                     <div className="flex w-full items-center justify-center overflow-hidden">
                         <div>
-                            <h1 className="w-full max-w-[900px] bg-gradient-custom bg-clip-text px-5 pb-10 text-center text-6xl font-semibold text-transparent drop-shadow-[0_6px_10px_rgba(0,0,0,0.40)] max-lg:text-3xl">{post.title}</h1>
-                            <div className="flex justify-center gap-10 text-coldGrey">
+                            <h1 className="w-full max-w-[900px] bg-gradient-custom bg-clip-text px-5 pb-10 text-center text-6xl font-bold text-transparent drop-shadow-[0_6px_10px_rgba(0,0,0,0.40)] max-lg:text-3xl max-md:px-3 max-md:text-2xl">{post.title}</h1>
+                            <div className="flex justify-center gap-10 italic text-coldGrey max-md:gap-5 max-md:text-xs">
                                 <span>{datePost}</span>
                                 {post.authors[0] && (
                                     <span>Author: {post.authors[0].fullName}</span>
                                 )}
                             </div>
                         </div>
-                        <figure className="fixed left-0 top-0 -z-20 h-[550px] w-full max-lg:h-[450px]">
+                        <figure className="fixed left-0 top-0 -z-20 h-[550px] w-full max-lg:h-[400px] max-md:h-[350px]">
                             {post.image ? (
                                 <Image className="size-full object-cover" src={post.image[0].url} alt={post.image[0].name} width={400} height={220}/>
                             ) : (
                                 <div className="h-[600px] w-full bg-slate-800"></div>
                             )}
-                            <span className="absolute left-0 top-0 size-full bg-back-dark !bg-opacity-70 backdrop-blur-[6px]"></span>
+                            <span className="absolute left-0 top-0 size-full bg-back-dark !bg-opacity-80 backdrop-blur-[6px] max-md:!bg-opacity-70"></span>
                         </figure>
                     </div>
                 </div>
-                <div className="w-full bg-back py-10">
+                <div className="w-full bg-back py-10 max-md:py-6">
                     <div className="container max-w-[1000px]">
                         <div>
                             <NotionRenderer

@@ -18,16 +18,16 @@ export default function Posts({ posts } : { posts?: BlogPost[] }) {
                                 <div className="h-[220px] w-full bg-slate-800"></div>
                             )}
                         </figure>
-                        <div className="flex flex-col gap-3 px-7 py-5">
-                            <h2 className="flex min-h-[84px] items-center bg-gray-200 bg-clip-text text-xl font-bold text-transparent transition-all group-hover/item:bg-gradient-custom">{post.title}</h2>
-                            <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-col gap-3 px-6 py-5">
+                            <h2 className="flex min-h-[84px] items-center bg-gray-200 bg-clip-text text-xl font-bold tracking-wide text-transparent transition-all group-hover/item:bg-gradient-custom">{post.title}</h2>
+                            <div className="flex max-h-[26px] flex-wrap gap-2 overflow-hidden">
                                 {post.tags && (
                                     post.tags.map((tag) => (
-                                        <span key={tag} className="rounded-full border-[1px] border-solid border-customIndigo/80 bg-customIndigo/20 px-[10px] py-1 text-xs max-lg:text-[9px]">{tag}</span>
+                                        <span key={tag} className="flex-1 rounded-full border-[1px] border-solid border-customIndigo/80 bg-customIndigo/20 px-[10px] py-1 text-center text-xs max-lg:text-[9px]">{tag}</span>
                                     ))
                                 )}
                             </div>
-                            <span className="mb-3 min-h-28 text-sm text-coldGrey ">{post.description}</span>
+                            <span className="mb-3 line-clamp-5 max-h-[120px] overflow-hidden text-sm text-coldGrey ">{post.description}</span>
                         </div>
                     </div>
                 </Link>
