@@ -17,14 +17,14 @@ export default function AboutPage() {
     return (
         <div className="w-full">
             <div className="container">
-                <div className="my-16">
+                <div className="my-16 max-lg:my-6">
                     <Title
                         type="h1" 
                         title="About me" 
                         description="Crafting visually stunning and functional experiences - I'm a Frontend Developer passionate about turning ideas into digital reality"
                     />
                     <div className="tracking-wide text-coldGrey max-xs:text-sm">
-                        <article className="my-16 flex items-center px-16 max-xl:px-0 max-lg:flex-col max-lg:gap-5">
+                        <article className="my-16 flex items-center px-16 max-xl:px-0 max-lg:my-6 max-lg:flex-col max-lg:gap-5">
                             <div className="relative z-50 mr-16 size-80 min-w-80 overflow-hidden rounded-full bg-gradient-custom p-0.5 shadow-xl shadow-blue-500/50 max-lg:relative max-lg:right-0 max-lg:top-0 max-lg:mr-0 max-lg:size-64 max-lg:min-w-64">
                                 <Image priority className="h-auto w-full max-w-xs rounded-full" src="/images/fabio-developer.jpg" width="320" height="320" alt="Fabio Junior Raminhuk - Frontend Developer" quality={100}/>
                             </div>

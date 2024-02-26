@@ -20,7 +20,7 @@ export default async function Blog() {
     return (
         <div className="w-full">
             <div className="container">
-                <div className="my-16">
+                <div className="my-16 max-lg:my-6">
                     <Title
                         type="h1"
                         title="Blog" 
