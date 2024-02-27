@@ -2,23 +2,35 @@
 type technologiesProps = {
     title: string
     score: number
+    file?: string
 }
-
 
 export const technologiesData: technologiesProps[] = [
     {
-        title: 'HTML, CSS, Sass, Less & Tailwind CSS',
-        score: 90
+        title: 'TypeScript',
+        score: 90,
+        file: 'typescript'
+    },
+    {
+        title: 'JavaScript & jQuery',
+        score: 90,
+        file: 'javascript'
+    },
+    {
+        title: 'HTML, CSS, Sass, & Tailwind',
+        score: 90,
+        file: 'html'
+    },
+    {
+        title: 'React, Zustand',
+        score: 70,
+        file: 'react'
         
     },
     {
-        title: 'JavaScript, TypeScript & jQuery',
-        score: 90
-        
-    },
-    {
-        title: 'React, Next &  Zustand',
-        score: 70
+        title: 'Next',
+        score: 70,
+        file: 'next'
         
     },
     {
@@ -33,7 +45,8 @@ export const technologiesData: technologiesProps[] = [
     },
     {
         title: 'Node',
-        score: 50
+        score: 50,
+        file: 'node'
         
     },
     {
