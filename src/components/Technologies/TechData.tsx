@@ -35,7 +35,7 @@ export const technologiesData: technologiesProps[] = [
     },
     {
         title: 'HTML',
-        description: 'The backbone of web development, providing the structure and semantics for building interactive and accessible websites.',
+        description: 'The cornerstone of modern web development, it furnishes the essential structure and semantics necessary for crafting interactive and accessible websites that cater to diverse user needs and preferences.',
         icon: <HTML/>
     },
     {
@@ -45,7 +45,7 @@ export const technologiesData: technologiesProps[] = [
     },
     {
         title: 'Styled Components',
-        description: 'A CSS-in-JS library for React that enables developers to style components with JavaScript, streamlining the creation of dynamic and reusable UI elements.',
+        description: 'A CSS-in-JS library tailored for React, it empowers developers to effortlessly style components using JavaScript, thereby simplifying the process of crafting dynamic and reusable UI elements with enhanced flexibility and control.',
         icon: <StyleComponents/>
     },
     {

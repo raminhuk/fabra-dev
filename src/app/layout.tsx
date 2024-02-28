@@ -1,6 +1,6 @@
 import './globals.css'
 
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import type { Metadata, Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 
@@ -40,6 +40,7 @@ export const viewport: Viewport = {
 }
 
 export const GA_TRACKING_ID: string = 'G-CSXQC9RNJD'
+export const GA_TAGMANAGER_ID: string = 'GTM-NSVBBRH9'
 
 export default function RootLayout({
     children,
@@ -54,6 +55,7 @@ export default function RootLayout({
                 <Footer />
             </body>
             <GoogleAnalytics gaId={GA_TRACKING_ID} />
+            <GoogleTagManager gtmId={GA_TAGMANAGER_ID} />
         </html>
     )
 }
