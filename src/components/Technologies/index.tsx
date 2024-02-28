@@ -1,18 +1,40 @@
+'use client'
+import { useEffect } from 'react'
+import VanillaTilt from 'vanilla-tilt'
+
 import Title from '../Title'
 import { additionalTechData, technologiesData } from './TechData'
 
 export default function Technologies() {
+    useEffect(() => {
+        const elements = document.querySelectorAll<HTMLElement>('[data-effect="js-tilt"]')
+        elements.forEach(element => {
+            // Importe VanillaTilt conforme necessário
+            VanillaTilt.init(element, {
+                max: 5,
+                speed: 200,
+                glare: true,
+                'max-glare': 0.5,
+                scale: 1.03
+            })
+        })
+    }, [])
+    
     return <>
         <div>
-            <div className="flex flex-col gap-16 max-xs:gap-12">
-                {technologiesData?.map((item, i) => (
-                    <div key={i}>
-                        <div className="flex items-center justify-between gap-5 pb-3">
-                            <h3 className="text-2xl font-semibold max-lg:text-base">{item.title}</h3>
-                            <p className="max-xs:text-xs">{item?.score >= 90 ? 'Advanced' : item?.score >= 60 && item?.score < 90 ? 'Intermediate' : item?.score > 40 && item?.score < 60 ? 'Regular' : 'Beginner'}</p>
-                        </div>
-                        <div className="w-full rounded-full bg-back-dark">
-                            <span className="block h-4 rounded-full bg-gradient-custom shadow-md shadow-blue-500/50 max-lg:h-3" style={{width: item.score+'%'}}></span>
+            <div className="relative grid grid-cols-3 flex-col gap-8 max-lg:grid-cols-2 max-lg:gap-4 max-md:grid-cols-1">
+                {technologiesData?.map(({title, icon, description}, i) => (
+                    <div key={i} data-effect="js-tilt" className="group flex cursor-pointer items-center gap-5 rounded-xl border-l-[1px] border-t-[1px] border-gray-700 bg-gray-700 !bg-opacity-30 p-6 backdrop-blur-[6px] transition-all">
+                        {icon && (
+                            <span className="size-10 min-w-10">
+                                {icon}
+                            </span>
+                        )}
+                        <div className="flex flex-col gap-1 ">
+                            <h3 className="text-lg font-semibold max-lg:text-base">{title}</h3>
+                            {description && (
+                                <p className="line-clamp-4 text-sm text-coldGrey   max-md:line-clamp-2 ">{description}</p>
+                            )}
                         </div>
                     </div>
                 ))}
