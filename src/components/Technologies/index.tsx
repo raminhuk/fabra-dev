@@ -7,17 +7,18 @@ import { additionalTechData, technologiesData } from './TechData'
 
 export default function Technologies() {
     useEffect(() => {
-        const elements = document.querySelectorAll<HTMLElement>('[data-effect="js-tilt"]')
-        elements.forEach(element => {
-            // Importe VanillaTilt conforme necessário
-            VanillaTilt.init(element, {
-                max: 5,
-                speed: 200,
-                glare: true,
-                'max-glare': 0.5,
-                scale: 1.03
+        if (window.innerWidth > 980) {
+            const elements = document.querySelectorAll<HTMLElement>('[data-effect="js-tilt"]')
+            elements.forEach(element => {
+                VanillaTilt.init(element, {
+                    max: 5,
+                    speed: 200,
+                    glare: true,
+                    'max-glare': 0.5,
+                    scale: 1.05
+                })
             })
-        })
+        }
     }, [])
     
     return <>
@@ -25,15 +26,17 @@ export default function Technologies() {
             <div className="relative grid grid-cols-3 flex-col gap-8 max-lg:grid-cols-2 max-lg:gap-4 max-md:grid-cols-1">
                 {technologiesData?.map(({title, icon, description}, i) => (
                     <div key={i} data-effect="js-tilt" className="group flex cursor-pointer items-center gap-5 rounded-xl border-l-[1px] border-t-[1px] border-gray-700 bg-gray-700 !bg-opacity-30 p-6 backdrop-blur-[6px] transition-all">
-                        {icon && (
-                            <span className="size-10 min-w-10">
-                                {icon}
+                        <div className="flex flex-col gap-1 transition-all">
+                            <span className="mb-2 flex gap-2">
+                                {icon && (
+                                    <span className="flex size-7 min-w-8">
+                                        {icon}
+                                    </span>
+                                )}
+                                <h3 className="text-lg font-semibold max-lg:text-base">{title}</h3>
                             </span>
-                        )}
-                        <div className="flex flex-col gap-1 ">
-                            <h3 className="text-lg font-semibold max-lg:text-base">{title}</h3>
                             {description && (
-                                <p className="line-clamp-4 text-sm text-coldGrey   max-md:line-clamp-2 ">{description}</p>
+                                <p className="text-sm text-coldGrey">{description}</p>
                             )}
                         </div>
                     </div>
