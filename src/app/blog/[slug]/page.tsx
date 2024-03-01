@@ -49,16 +49,20 @@ export default async function PostBlog({ params }: Props) {
             '@context': 'https://schema.org',
             '@type': 'BlogPosting',
             'headline': `${post.title}`,
+            'image': [
+                `${post.image[0].url}`,
+            ],
             'author': {
                 '@type': 'Person',
-                'name': `${post.authors[0].fullName}`
+                'name': `${post.authors[0].fullName}`,
+                'url': 'https://fabra.dev/about-me',
             },
             'publisher': {
                 '@type': 'Organization',
                 'name': 'Fabra.dev'
             },
-            'datePublished': `${post?.date}`,
-            'dateModified': `${post?.date}`,
+            'datePublished': `${post?.date}T10:00:00-03:00`,
+            'dateModified': `${post?.date}T10:00:00-03:00`,
             'mainEntityOfPage': {
                 '@type': 'WebPage',
                 '@id': `https://fabra.dev/blog/${params.slug}`
