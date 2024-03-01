@@ -1,4 +1,4 @@
-const NOTION_BLOG_ID = '5d15147b9b2a4bc0a7b15f184991263d'
+const NOTION_BLOG_ID = process.env.NEXT_PUBLIC_NOTION_BLOG_ID
 
 export const getAllPosts = async () => {
     const res = await fetch(`https://notion-api.splitbee.io/v1/table/${NOTION_BLOG_ID}`,
