@@ -16,6 +16,7 @@
     "react-dom": "^18",
     "react-icons": "^5.0.1",
     "react-notion": "^0.10.0",
+    "schema-dts": "^1.1.2",
     "vanilla-tilt": "^1.8.1"
   },
   "devDependencies": {

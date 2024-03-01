@@ -4,7 +4,9 @@ import 'prismjs/themes/prism-tomorrow.css'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import Script from 'next/script'
 import { NotionRenderer } from 'react-notion'
+import { BlogPosting, FAQPage, WithContext } from 'schema-dts'
 
 import { BlogPost } from '@/@types/blog'
 import { getAllPosts, getPosts } from '@/utils/api/splitbeeApi'
@@ -43,8 +45,35 @@ export default async function PostBlog({ params }: Props) {
         }
         const pagePost = await getPosts(post.id)
 
+        const jsonLd: WithContext<BlogPosting> = {
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            'headline': `${post.title}`,
+            'author': {
+                '@type': 'Person',
+                'name': `${post.authors[0].fullName}`
+            },
+            'publisher': {
+                '@type': 'Organization',
+                'name': 'Fabra.dev'
+            },
+            'datePublished': `${post?.date}`,
+            'dateModified': `${post?.date}`,
+            'mainEntityOfPage': {
+                '@type': 'WebPage',
+                '@id': `https://fabra.dev/blog/${params.slug}`
+            }
+        }
+
         return (
             <div>
+                <Script
+                    id="postblog-schema"
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(jsonLd),
+                    }}
+                />
                 <div className="relative flex h-[450px] w-full overflow-hidden max-lg:h-[300px] max-md:h-[260px]">
                     <div className="flex w-full items-center justify-center overflow-hidden">
                         <div>
