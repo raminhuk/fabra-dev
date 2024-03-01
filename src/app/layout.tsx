@@ -19,6 +19,20 @@ export const metadata: Metadata = {
     keywords: ['Frontend Developer', 'Web Developer', 'HTML', 'CSS',
         'JavaScript', 'React', 'Vue.js', 'Angular', 'UI/UX Design', 'Responsiveness', 'Web Accessibility', 'SEO', 'Web Performance', 'Frontend Development', 'Programming', 'Git', 'GitHub', 'Online Portfolio', 'Development Blog'
     ],
+    icons: {
+        icon: [
+            {
+                media: '(prefers-color-scheme: light)',
+                url: '/favicon.ico',
+                href: '/favicon.ico',
+            },
+            {
+                media: '(prefers-color-scheme: dark)',
+                url: '/favicon.ico',
+                href: '/favicon.ico',
+            },
+        ],
+    },
     creator: 'Fabio J Raminhuk',
     openGraph: {
         type: 'website',
