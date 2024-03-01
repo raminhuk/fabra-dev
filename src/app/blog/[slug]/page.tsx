@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
 import { NotionRenderer } from 'react-notion'
-import { BlogPosting, FAQPage, WithContext } from 'schema-dts'
+import { BlogPosting, WithContext } from 'schema-dts'
 
 import { BlogPost } from '@/@types/blog'
 import { getAllPosts, getPosts } from '@/utils/api/splitbeeApi'
