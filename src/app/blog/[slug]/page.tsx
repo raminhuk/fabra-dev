@@ -81,7 +81,7 @@ export default async function PostBlog({ params }: Props) {
                 <div className="relative flex h-[450px] w-full overflow-hidden max-lg:h-[300px] max-md:h-[260px]">
                     <div className="flex w-full items-center justify-center overflow-hidden">
                         <div>
-                            <h1 className="w-full max-w-[900px] bg-gradient-custom bg-clip-text px-5 pb-10 text-center text-6xl font-bold text-transparent drop-shadow-[0_6px_10px_rgba(0,0,0,0.40)] max-lg:text-3xl max-md:px-3 max-md:text-2xl">{post.title}</h1>
+                            <h1 className="w-full max-w-[900px] bg-gradient-custom bg-clip-text px-5 pb-10 text-center text-5xl font-bold text-transparent drop-shadow-[0_6px_10px_rgba(0,0,0,0.40)] max-lg:text-3xl max-md:px-3 max-md:text-2xl">{post.title}</h1>
                             <div className="flex justify-center gap-10 italic text-coldGrey max-md:gap-5 max-md:text-xs">
                                 <span>{datePost}</span>
                                 {post.authors[0] && (
@@ -113,7 +113,7 @@ export default async function PostBlog({ params }: Props) {
                                 }}
                             />
                         </div>
-                        <div className="flex gap-2">
+                        <div className="mt-10 flex gap-2">
                             Tags: 
                             {post.tags && (
                                 post.tags.map((tag) => (

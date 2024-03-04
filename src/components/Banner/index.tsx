@@ -4,7 +4,7 @@ import { ButtonDownload } from '../ButtonDownload'
 
 export default function Banner(){
     return <>
-        <div className="flex h-screen w-full items-center max-lg:h-[calc(100vh-72px)] max-lg:min-h-[620px] max-lg:items-start">
+        <div className="flex h-screen min-h-[700px] w-full items-center max-lg:h-[calc(100vh-72px)] max-lg:min-h-[610px] max-lg:items-start">
             <div className="container">
                 <div className="group relative w-full pt-20 max-lg:mb-20 max-lg:pt-6 max-md:pt-0">
                     <div className="relative z-40 flex flex-col gap-10 max-lg:my-10 max-lg:gap-5">
