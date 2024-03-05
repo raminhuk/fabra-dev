@@ -1,11 +1,17 @@
 'use client'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import VanillaTilt from 'vanilla-tilt'
 
 import Title from '../Title'
 import { additionalTechData, technologiesData } from './TechData'
 
 export default function Technologies() {
+    const [open, setOpen] = useState(false)
+
+    const handleClick = () => {
+        setOpen(!open)
+    }
+
     useEffect(() => {
         if (window.innerWidth > 980) {
             const elements = document.querySelectorAll<HTMLElement>('[data-effect="js-tilt"]')
@@ -36,7 +42,7 @@ export default function Technologies() {
                                 <h3 className="text-lg font-semibold max-lg:text-base">{title}</h3>
                             </span>
                             {description && (
-                                <p className="text-sm text-coldGrey">{description}</p>
+                                <p className={`text-sm text-coldGrey ${open ? 'max-md:line-clamp-none' : 'max-md:line-clamp-3'}`} onClick={handleClick}>{description}</p>
                             )}
                         </div>
                     </div>
