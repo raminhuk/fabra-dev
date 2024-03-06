@@ -16,7 +16,7 @@ export default function ProjectsPage() {
     return (
         <div className="w-full">
             <div className="container">
-                <div className="my-16 max-lg:my-6">
+                <div className="my-12 max-lg:my-4">
                     <Title
                         type="h1"
                         title="Projects" 

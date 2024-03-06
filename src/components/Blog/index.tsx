@@ -7,7 +7,7 @@ import { BlogPost } from '@/@types/blog'
 
 export default function Posts({ posts } : { posts?: BlogPost[] }) {
     return (
-        <div className="grid grid-cols-3 gap-12 max-lg:grid-cols-2 max-sm:grid-cols-1">
+        <div className="grid grid-cols-3 gap-12 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:gap-8">
             {posts?.map((post) => (
                 <Link className="group/item" key={post.id} href={`/blog/${post.slug}`}>
                     <div className="overflow-hidden rounded-xl bg-back-dark">
@@ -19,7 +19,7 @@ export default function Posts({ posts } : { posts?: BlogPost[] }) {
                             )}
                         </figure>
                         <div className="flex flex-col gap-3 px-6 py-5">
-                            <h2 className="flex min-h-[84px] items-center bg-gray-200 bg-clip-text text-xl font-bold tracking-wide text-transparent transition-all group-hover/item:bg-gradient-custom">{post.title}</h2>
+                            <h2 className="flex min-h-[84px] items-center bg-gray-200 bg-clip-text text-xl font-bold tracking-wide text-transparent transition-all group-hover/item:bg-gradient-custom max-sm:min-h-0 max-sm:text-lg max-sm:tracking-tight">{post.title}</h2>
                             <div className="flex max-h-[26px] flex-wrap gap-2 overflow-hidden">
                                 {post.tags && (
                                     post.tags.map((tag) => (
@@ -27,7 +27,7 @@ export default function Posts({ posts } : { posts?: BlogPost[] }) {
                                     ))
                                 )}
                             </div>
-                            <span className="mb-3 line-clamp-5 max-h-[120px] overflow-hidden text-sm text-coldGrey ">{post.description}</span>
+                            <span className="mb-3 line-clamp-5  min-h-[100px] overflow-hidden text-sm text-coldGrey max-md:line-clamp-4 max-md:min-h-0 ">{post.description}</span>
                         </div>
                     </div>
                 </Link>
