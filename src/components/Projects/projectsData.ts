@@ -4,7 +4,7 @@ type projectsProps = {
     description: string;
     image: string;
     tech: string[];
-    linkPreview: string;
+    linkPreview?: string;
     linkGithub: string;
 }
 
@@ -15,7 +15,7 @@ export const projectsData: projectsProps[] = [
         description: 'Discover your top songs and artists, favorite genres, and relive recent listens in a unique and meaningful way',
         image: '/images/projects/tunefy.png',
         tech: ['React', 'TypeScript', 'Next', 'Tailwind', 'Axios', 'Zustand', 'Eslint'],
-        linkPreview: 'https://tunefy.fabra.dev',
+        // linkPreview: 'https://tunefy.fabra.dev',
         linkGithub: 'https://github.com/raminhuk/tunefy'
     },
     {
