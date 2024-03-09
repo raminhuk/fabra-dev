@@ -113,13 +113,15 @@ export default async function PostBlog({ params }: Props) {
                                 }}
                             />
                         </div>
-                        <div className="mt-10 flex gap-2">
-                            Tags: 
-                            {post.tags && (
-                                post.tags.map((tag) => (
-                                    <span key={tag} className="rounded-full border-[1px] border-solid border-customIndigo/80 bg-customIndigo/20 px-[10px] py-1 text-xs max-lg:text-[9px]">{tag}</span>
-                                ))
-                            )}
+                        <div className="mt-10 flex flex-col gap-2">
+                            <span>Tags:</span>
+                            <div className="flex flex-wrap gap-2">
+                                {post.tags && (
+                                    post.tags.map((tag) => (
+                                        <span key={tag} className="rounded-full border-[1px] border-solid border-customIndigo/80 bg-customIndigo/20 px-[10px] py-1 text-xs">{tag}</span>
+                                    ))
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
