@@ -53,7 +53,7 @@ export const projectsData: projectsProps[] = [
     {
         title: 'QRCode Generator in React',
         description: 'Built using React, this QRCode Generator is a user-friendly tool that allows users to effortlessly create QR codes for various purposes.',
-        image: '/images/projects/qrcodefabra.png',
+        image: '/images/projects/fabracode.png',
         tech: ['React', 'CSS', 'HTML', 'JavaScript'],
         linkPreview: 'https://qrcode.fabra.dev',
         linkGithub: 'https://github.com/raminhuk/react-code'
