@@ -51,12 +51,12 @@ export const projectsData: projectsProps[] = [
         linkGithub: 'https://github.com/raminhuk/tic-tac-toe'
     },
     {
-        title: 'QRCode Generator in React',
-        description: 'Built using React, this QRCode Generator is a user-friendly tool that allows users to effortlessly create QR codes for various purposes.',
+        title: 'QRCode Generator in React + Next',
+        description: 'Built using React, Next and Ant Design UI, this QRCode Generator is a user-friendly tool that allows users to effortlessly create QR codes for various purposes.',
         image: '/images/projects/fabracode.png',
-        tech: ['React', 'CSS', 'HTML', 'JavaScript'],
+        tech: ['React', 'Next', 'TypeScript', 'Ant Design', 'Tailwind'],
         linkPreview: 'https://qrcode.fabra.dev',
-        linkGithub: 'https://github.com/raminhuk/react-code'
+        linkGithub: 'https://github.com/raminhuk/qr-code-generator'
     },
     
 ]
