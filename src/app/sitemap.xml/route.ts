@@ -33,13 +33,19 @@ function generateSiteMap(posts: BlogPost[]) {
     </url>
     <url>
       <loc>${URL}/tools</loc>
-      <lastmod>2024-02-24</lastmod>
+      <lastmod>2024-03-18</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
     </url>
     <url>
       <loc>${URL}/blog</loc>
       <lastmod>2024-02-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    <url>
+      <loc>${URL}/border-radius-generator</loc>
+      <lastmod>2024-03-18</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
     </url>
