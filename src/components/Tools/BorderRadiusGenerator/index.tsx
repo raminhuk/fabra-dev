@@ -32,7 +32,7 @@ const BorderRadiusGenerator = () => {
     }
 
     const handleSliderChange = (key: keyof BorderRadiusProps, value: number) => {
-        setPositions({ ...positions, [key]: value })
+        setPositions({ ...positions, [key]: value > 100 ? 100 : value })
     }
 
     const handleCopyClick = () => {
@@ -57,9 +57,19 @@ const BorderRadiusGenerator = () => {
                     
                 </div>
                 <div className="flex w-full items-center justify-between gap-20 py-5 max-lg:flex-col">
-                    <div className="flex w-full flex-1 flex-col gap-8 max-lg:order-2">
+                    <div className="flex w-full flex-1 flex-col gap-6 max-lg:order-2">
                         <div>
-                            <label htmlFor="allRadius" className="mb-2 block">All Sides:</label>
+                            <div className="flex justify-between">
+                                <label htmlFor="allRadius" className="mb-2 block">All Sides:</label>
+                                <input
+                                    type="number"
+                                    min="0"
+                                    max="100"
+                                    value={allRadius}
+                                    onChange={handleAllRadiusChange}
+                                    className="h-6 w-12 cursor-pointer appearance-none rounded bg-gray-700 text-center text-xs"
+                                />
+                            </div>
                             <input
                                 type="range"
                                 min="0"
@@ -71,7 +81,17 @@ const BorderRadiusGenerator = () => {
                         </div>
                         {Object.entries(positions).map(([key, value]) => (
                             <div key={key} className="mb-4">
-                                <label htmlFor={key} className="mb-2 block capitalize">{key}:</label>
+                                <div className="flex justify-between">
+                                    <label htmlFor={key} className="mb-2 block capitalize">{key}:</label>
+                                    <input
+                                        type="number"
+                                        min="0"
+                                        max="100"
+                                        value={value}
+                                        onChange={(e) => handleSliderChange(key as keyof BorderRadiusProps, parseInt(e.target.value))}
+                                        className="h-6 w-12 cursor-pointer appearance-none rounded bg-gray-700 text-center text-xs"
+                                    />
+                                </div>
                                 <input
                                     type="range"
                                     min="0"
@@ -85,18 +105,16 @@ const BorderRadiusGenerator = () => {
                         ))}
                     
                     </div>
-                    <div className="flex w-full flex-1 flex-col items-center gap-10 max-lg:order-1 max-lg:gap-4">
-                        <h3 className="text-center text-xl">Preview</h3>
-                        <div className="flex h-64 w-full items-center rounded-lg bg-gradient-custom p-8 max-lg:h-32 max-lg:p-4" style={{borderRadius: `${positions.topLeft}px ${positions.topRight}px ${positions.bottomRight}px ${positions.bottomLeft}px`}}>
-                            <div className="text-lg max-sm:text-sm">
-                                <pre>
-                                    <code>
-                border-radius: {positions.topLeft}px {positions.topRight}px {positions.bottomRight}px {positions.bottomLeft}px;<br/>
-                -webkit-border-radius: {positions.topLeft}px {positions.topRight}px {positions.bottomRight}px {positions.bottomLeft}px;<br/>
-                -moz-border-radius: {positions.topLeft}px {positions.topRight}px {positions.bottomRight}px {positions.bottomLeft}px;
-                                    </code>
-                                </pre>
-                            </div>
+                    <div className="flex w-full flex-1 flex-col items-center gap-8 max-lg:order-1 max-lg:gap-4">
+                        <div className="flex size-64 items-center rounded-lg bg-gradient-custom p-8 max-lg:h-32 max-lg:p-4" style={{borderRadius: `${positions.topLeft}px ${positions.topRight}px ${positions.bottomRight}px ${positions.bottomLeft}px`}}></div>
+                        <div className="w-full">
+                            <pre className="w-full rounded bg-gray-800 p-8 text-base max-sm:p-4 max-sm:text-[11px]">
+                                <code>
+                                    border-radius: {positions.topLeft}px {positions.topRight}px {positions.bottomRight}px {positions.bottomLeft}px;<br/>
+                                    -webkit-border-radius: {positions.topLeft}px {positions.topRight}px {positions.bottomRight}px {positions.bottomLeft}px;<br/>
+                                    -moz-border-radius: {positions.topLeft}px {positions.topRight}px {positions.bottomRight}px {positions.bottomLeft}px;
+                                </code>
+                            </pre>
                         </div>
                         <div className="flex w-full flex-1 justify-end">
                             <button onClick={handleCopyClick} className="w-full rounded border-[1px] border-gray-700 bg-gray-800 p-4 hover:bg-gray-900">
