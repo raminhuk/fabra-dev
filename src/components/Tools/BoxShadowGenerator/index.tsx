@@ -65,7 +65,7 @@ const BoxShadowGenerator = () => {
                                         max="100"
                                         value={value}
                                         onChange={(e) => handleInputChange(e, key)}
-                                        className={`${key === 'color' ? 'h-8' : 'h-6'} w-14 cursor-pointer appearance-none rounded bg-gray-700 pl-4 ${
+                                        className={`${key === 'color' ? 'h-8' : 'h-6 pl-4'} w-14 cursor-pointer appearance-none rounded bg-gray-700 ${
                                             key === 'color' ? '' : 'text-center'
                                         } text-xs`}
                                     />
