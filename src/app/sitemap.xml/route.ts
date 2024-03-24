@@ -55,6 +55,12 @@ function generateSiteMap(posts: BlogPost[]) {
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
     </url>
+    <url>
+      <loc>${URL}/text-shadow-generator</loc>
+      <lastmod>2024-03-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+    </url>
      ${posts.map(({ slug,date }) => {
         return `
            <url>
