@@ -47,6 +47,9 @@ export const metadata: Metadata = {
     twitter: {
         site: '@fabio_rmk',
     },
+    other: {
+        'google-adsense-account': 'ca-pub-4699585166403980',
+    },
 }
 
 export const viewport: Viewport = {

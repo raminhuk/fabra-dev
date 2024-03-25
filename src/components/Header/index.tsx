@@ -130,21 +130,22 @@ export default function Header() {
                                         >
                                         </span>
                                         {menuData.map((menuItem, index) => (
-                                            <li 
-                                                onMouseOver={handleMouseOver}
-                                                onMouseOut={handleMouseOut}
-                                                key={index} className="relative max-lg:flex max-lg:w-full">
-                                                {menuItem.path ? (
-                                                    <Link
-                                                        onClick={navbarToggleHandler}
-                                                        href={menuItem.path}
-                                                        className="relative flex px-8 py-10 text-base max-xl:px-4 max-xl:py-8 max-lg:w-full max-lg:justify-center max-lg:text-xl max-lg:font-semibold max-sm:p-5"
-                                                    >
-                                                        {menuItem.title}
-                                                    </Link>
-                                                ) : (
-                                                    <>
-                                                        {/* <p
+                                            !menuItem.newTab && (
+                                                <li 
+                                                    onMouseOver={handleMouseOver}
+                                                    onMouseOut={handleMouseOut}
+                                                    key={index} className="relative max-lg:flex max-lg:w-full">
+                                                    {menuItem.path ? (
+                                                        <Link
+                                                            onClick={navbarToggleHandler}
+                                                            href={menuItem.path}
+                                                            className="relative flex px-8 py-10 text-base max-xl:px-4 max-xl:py-8 max-lg:w-full max-lg:justify-center max-lg:text-xl max-lg:font-semibold max-sm:p-5"
+                                                        >
+                                                            {menuItem.title}
+                                                        </Link>
+                                                    ) : (
+                                                        <>
+                                                            {/* <p
                                                             onClick={() => handleSubmenu(index)}
                                                             className="flex cursor-pointer items-center justify-between py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                                                         >
@@ -174,9 +175,10 @@ export default function Header() {
                                                                 </Link>
                                                             ))}
                                                         </div> */}
-                                                    </>
-                                                )}
-                                            </li>
+                                                        </>
+                                                    )}
+                                                </li>
+                                            )
                                         ))}
                                     </ul>
                                 </nav>

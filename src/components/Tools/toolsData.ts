@@ -17,5 +17,9 @@ export const toolsData: toolsProps[] = [
     {
         title: 'Text Shadow Generator',
         description: 'Elevate the visual impact of your text elements with the Text Shadow Generator. Create distinctive text shadows to enhance depth and dimension, effortlessly elevating the aesthetics of your website. With user-friendly controls, customize shadow properties such as blur, color, and position in real-time. Instantly generate CSS code, enabling seamless integration of captivating text shadow effects into your web design.'
+    },
+    {
+        title: 'Color Gradient Generator',
+        description: 'Elevate the visual impact of your text elements with the Text Shadow Generator. Create distinctive text shadows to enhance depth and dimension, effortlessly elevating the aesthetics of your website. With user-friendly controls, customize shadow properties such as blur, color, and position in real-time. Instantly generate CSS code, enabling seamless integration of captivating text shadow effects into your web design.'
     }
 ]

@@ -36,6 +36,12 @@ const menuData: Menu[] = [
         title: 'Blog',
         path: '/blog',
         newTab: false,
+    },
+    {
+        id: 6,
+        title: 'Privacy Policy',
+        path: '/privacy-policy',
+        newTab: true,
     }
 ]
 export default menuData
