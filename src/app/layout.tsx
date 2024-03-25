@@ -70,6 +70,7 @@ export default function RootLayout({
                 <Header />
                 {children}
                 <Footer />
+                
             </body>
             <GoogleAnalytics gaId={GA_TRACKING_ID} />
             <GoogleTagManager gtmId={GA_TAGMANAGER_ID} />

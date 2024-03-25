@@ -54,6 +54,19 @@ const BorderRadiusGenerator = () => {
                         title="Border Radius Generator" 
                         description="Welcome to our Border-Radius CSS Generator, designed to streamline the process of creating elegant border-radius CSS declarations for your website effortlessly. Packed with numerous customizable options, this tool showcases instant results, empowering you to achieve the perfect look for your website&apos;s elements. And if you&apos;re seeking to elevate your design further, don&apos;t forget to explore our Font Generator for adding stylish fonts to your project."
                     />
+                    <div>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4699585166403980"
+                            crossOrigin="anonymous"></script>
+                        <ins className="adsbygoogle"
+                            style={{display:'block'}}
+                            data-ad-client="ca-pub-4699585166403980"
+                            data-ad-slot="9144368362"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                        <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
                     
                 </div>
                 <div className="flex w-full items-center justify-between gap-20 py-5 max-lg:flex-col">
