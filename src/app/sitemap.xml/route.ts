@@ -61,6 +61,18 @@ function generateSiteMap(posts: BlogPost[]) {
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
     </url>
+    <url>
+      <loc>${URL}/color-gradient-generator</loc>
+      <lastmod>2024-03-25</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    <url>
+      <loc>${URL}/privacy-policy</loc>
+      <lastmod>2024-03-25</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+    </url>
      ${posts.map(({ slug,date }) => {
         return `
            <url>
