@@ -20,10 +20,10 @@ export default function CookieBanner() {
         if (cookieConsent !== null) {
             const newValue = cookieConsent ? 'granted' : 'denied'
             sendGAEvent('consent', 'default', {
-                'ad_storage': 'denied',
-                'analytics_storage': 'denied'
+                'ad_storage': 'granted',
+                'analytics_storage': 'granted'
             })
-            
+
             sendGAEvent('consent', 'update', {
                 'ad_storage': newValue,
                 'analytics_storage': newValue
