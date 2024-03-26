@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 
-import CookieBanner from '../Analytics'
+import CookieBanner from '../BannerCookies'
 import Logo from '../Logo'
 import Social from '../Social'
 import menuData from './menuData'
