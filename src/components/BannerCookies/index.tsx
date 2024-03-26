@@ -14,6 +14,10 @@ export default function CookieBanner() {
         const storedCookieConsent = getLocalStorage('cookie_consent', null)
         setCookieConsent(storedCookieConsent)
         setStorageLoaded(true)
+        sendGAEvent('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied'
+        })
     }, [])
 
     useEffect(() => {
@@ -27,10 +31,7 @@ export default function CookieBanner() {
         }
     }, [cookieConsent])
 
-    sendGAEvent('consent', 'default', {
-        'ad_storage': 'denied',
-        'analytics_storage': 'denied'
-    })
+    
 
     const handleDecline = () => {
         setCookieConsent(false)
