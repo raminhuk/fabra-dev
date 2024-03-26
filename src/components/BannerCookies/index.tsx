@@ -14,15 +14,16 @@ export default function CookieBanner() {
         const storedCookieConsent = getLocalStorage('cookie_consent', null)
         setCookieConsent(storedCookieConsent)
         setStorageLoaded(true)
-        sendGAEvent('consent', 'default', {
-            'ad_storage': 'denied',
-            'analytics_storage': 'denied'
-        })
     }, [])
 
     useEffect(() => {
         if (cookieConsent !== null) {
             const newValue = cookieConsent ? 'granted' : 'denied'
+            sendGAEvent('consent', 'default', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied'
+            })
+            
             sendGAEvent('consent', 'update', {
                 'ad_storage': newValue,
                 'analytics_storage': newValue
