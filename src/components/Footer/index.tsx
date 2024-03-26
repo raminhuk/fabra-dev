@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import CookieBanner from '../Analytics'
 import menuData from '../Header/menuData'
 import Logo from '../Logo'
 import Social from '../Social'
@@ -29,6 +30,7 @@ export default function Footer() {
                     <span className="block text-center text-sm text-coldGrey">© 2024 Fabio J Raminhuk All Rights Reserved.</span>
                 </div>
             </div>
+            <CookieBanner />
         </footer>
     )
 }
