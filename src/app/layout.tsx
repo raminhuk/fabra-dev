@@ -4,7 +4,7 @@ import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import type { Metadata, Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 
-import CookieBanner from '@/components/Analytics/BannerCookies'
+import CookieBanner from '@/components/Analytics/CookieBanner'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 
