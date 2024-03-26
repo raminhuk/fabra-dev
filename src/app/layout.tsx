@@ -4,6 +4,7 @@ import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import type { Metadata, Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 
+import CookieBanner from '@/components/Analytics/BannerCookies'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 
@@ -70,7 +71,7 @@ export default function RootLayout({
                 <Header />
                 {children}
                 <Footer />
-                
+                <CookieBanner />
             </body>
             <GoogleAnalytics gaId={GA_TRACKING_ID} />
             <GoogleTagManager gtmId={GA_TAGMANAGER_ID} />
