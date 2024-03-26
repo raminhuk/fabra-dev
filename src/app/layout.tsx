@@ -3,6 +3,7 @@ import './globals.css'
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import type { Metadata, Viewport } from 'next'
 import { Poppins } from 'next/font/google'
+import Script from 'next/script'
 
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
@@ -66,6 +67,8 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
+            <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4699585166403980"
+                crossOrigin="anonymous" />
             <body className={poppins.className}>
                 <Header />
                 {children}
