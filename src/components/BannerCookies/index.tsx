@@ -27,6 +27,11 @@ export default function CookieBanner() {
         }
     }, [cookieConsent])
 
+    sendGAEvent('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+    })
+
     const handleDecline = () => {
         setCookieConsent(false)
     }
