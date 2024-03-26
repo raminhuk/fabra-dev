@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 
+import CookieBanner from '../Analytics'
 import Logo from '../Logo'
 import Social from '../Social'
 import menuData from './menuData'
@@ -84,7 +85,7 @@ export default function Header() {
 
     return (
         <>
-            {/* <CookieBanner /> */}
+            <CookieBanner />
             <header
                 className={`w-full ${(sticky && pathname === '/')
                     ? 'fixed z-[9999] bg-back-dark !bg-opacity-80 backdrop-blur-sm transition max-lg:relative'
