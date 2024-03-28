@@ -13,7 +13,7 @@ export default function Posts({ posts } : { posts?: BlogPost[] }) {
                     <div className="overflow-hidden rounded-xl bg-back-dark">
                         <figure>
                             {post.image ? (
-                                <Image className="h-[220px] w-full object-cover" src={post.image[0].url} alt={post.image[0].name} width={400} height={220}/>
+                                <Image className="h-[220px] w-full object-cover" src={post.image[0].url} alt={post.image[0].name} width={400} height={220} quality={70}/>
                             ) : (
                                 <div className="h-[220px] w-full bg-slate-800"></div>
                             )}

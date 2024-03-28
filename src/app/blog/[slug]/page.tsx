@@ -91,7 +91,7 @@ export default async function PostBlog({ params }: Props) {
                         </div>
                         <figure className="fixed left-0 top-0 -z-20 h-[550px] w-full max-lg:h-[400px] max-md:h-[350px]">
                             {post.image ? (
-                                <Image className="size-full object-cover" src={post.image[0].url} alt={post.image[0].name} width={400} height={220}/>
+                                <Image className="size-full object-cover" src={post.image[0].url} alt={post.image[0].name} width={400} height={220} quality={60}/>
                             ) : (
                                 <div className="h-[600px] w-full bg-slate-800"></div>
                             )}
