@@ -15,6 +15,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
+    manifest: 'https://fabra.dev/manifest.json',
     title: 'Fabio J. Raminhuk - Frontend Developer',
     description: 'Turning Ideas into Digital Reality: Fabio J.R, a Frontend Developer passionate about crafting elegant and functional interfaces to deliver exceptional user experiences',
     keywords: ['Frontend Developer', 'Web Developer', 'HTML', 'CSS',
