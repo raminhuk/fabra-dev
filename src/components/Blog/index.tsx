@@ -27,7 +27,7 @@ export default function Posts({ posts } : { posts?: BlogPost[] }) {
                                     ))
                                 )}
                             </div>
-                            <span className="mb-3 line-clamp-5  min-h-[100px] overflow-hidden text-sm text-coldGrey max-md:line-clamp-4 max-md:min-h-0 ">{post.description}</span>
+                            <span className="mb-3 line-clamp-5 min-h-[100px] overflow-hidden text-sm text-coldGrey max-md:line-clamp-4 max-md:min-h-0 ">{post.description}</span>
                         </div>
                     </div>
                 </Link>

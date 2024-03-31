@@ -95,7 +95,7 @@ export default async function PostBlog({ params }: Props) {
                             ) : (
                                 <div className="h-[600px] w-full bg-slate-800"></div>
                             )}
-                            <span className="absolute left-0 top-0 size-full bg-back-dark !bg-opacity-80 backdrop-blur-[6px] max-md:!bg-opacity-70"></span>
+                            <span className="absolute left-0 top-0 size-full bg-back-dark !bg-opacity-90 backdrop-blur-[6px] max-md:!bg-opacity-70"></span>
                         </figure>
                     </div>
                 </div>
