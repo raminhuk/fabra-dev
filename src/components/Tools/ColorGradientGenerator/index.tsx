@@ -23,7 +23,8 @@ const ColorGradientGenerator = () => {
     const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>, key: keyof GradientValuesProps, index?: number) => {
         if (index !== undefined) {
             const newStops = [...gradientValues.stops]
-            newStops[index] = parseInt(e.target.value)
+            const newValue = parseInt(e.target.value)
+            newStops[index] = isNaN(newValue) ? 0 : Math.min(100, Math.max(0, newValue))
             setGradientValues({ ...gradientValues, stops: newStops })
         } else {
             setGradientValues({ ...gradientValues, [key]: e.target.value })
@@ -31,10 +32,31 @@ const ColorGradientGenerator = () => {
     }
 
     const handleAddColorStop = () => {
+        const newColors = [...gradientValues.colors]
+        const newStops = [...gradientValues.stops]
+        
+        // Calculate equal distribution of stops
+        const step = 100 / (gradientValues.colors.length + 1)
+        newStops.push((gradientValues.colors.length + 1) * step)
+
         setGradientValues({
             ...gradientValues,
-            colors: [...gradientValues.colors, '#000000'],
-            stops: [...gradientValues.stops, 50],
+            colors: [...newColors, '#000000'],
+            stops: newStops,
+        })
+    }
+
+    const handleRemoveColor = (index: number) => {
+        const newColors = [...gradientValues.colors]
+        const newStops = [...gradientValues.stops]
+
+        newColors.splice(index, 1)
+        newStops.splice(index, 1)
+
+        setGradientValues({
+            ...gradientValues,
+            colors: newColors,
+            stops: newStops,
         })
     }
 
@@ -48,8 +70,12 @@ const ColorGradientGenerator = () => {
 
     const generateGradientCSS = (values: GradientValuesProps): string => {
         const { type, direction, colors, stops } = values
+
+        // Ensure correct gradient function for radial type
+        const gradientType = type === 'radial' ? 'radial-gradient' : 'linear-gradient'
+
         const colorStops = colors.map((color, index) => `${color} ${stops[index]}%`).join(', ')
-        return `${type}-gradient(${direction}, ${colorStops})`
+        return `${gradientType}(${direction}, ${colorStops})`
     }
 
     return (
@@ -96,33 +122,45 @@ const ColorGradientGenerator = () => {
                             </select>
                         </div>
                         {gradientValues.colors.map((color, index) => (
-                            <div key={index} className="mb-4">
-                                <label htmlFor={`color-${index}`} className="mb-2 block capitalize">
+                            <div key={index} className="mb-4 flex items-center">
+                                <div className="flex flex-1 flex-col gap-4">
+                                    <div className="flex flex-col">
+                                        <label htmlFor={`color-${index}`} className="mb-2 block capitalize">
                                     Color {index + 1}:
-                                </label>
-                                <input
-                                    type="color"
-                                    id={`color-${index}`}
-                                    value={color}
-                                    onChange={(e) => {
-                                        const newColors = [...gradientValues.colors]
-                                        newColors[index] = e.target.value
-                                        setGradientValues({ ...gradientValues, colors: newColors })
-                                    }}
-                                    className="h-8 w-full cursor-pointer appearance-none rounded bg-gray-700"
-                                />
-                                <label htmlFor={`stop-${index}`} className="mb-2 block capitalize">
+                                        </label>
+                                        <input
+                                            type="color"
+                                            id={`color-${index}`}
+                                            value={color}
+                                            onChange={(e) => {
+                                                const newColors = [...gradientValues.colors]
+                                                newColors[index] = e.target.value
+                                                setGradientValues({ ...gradientValues, colors: newColors })
+                                            }}
+                                            className="h-8 w-full cursor-pointer appearance-none rounded bg-gray-700"
+                                        />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <label htmlFor={`stop-${index}`} className="mb-2 ml-2 block capitalize">
                                     Stop {index + 1}:
-                                </label>
-                                <input
-                                    type="range"
-                                    id={`stop-${index}`}
-                                    min="0"
-                                    max="100"
-                                    value={gradientValues.stops[index]}
-                                    onChange={(e) => handleInputChange(e, 'stops', index)}
-                                    className="h-3 w-full cursor-pointer appearance-none rounded bg-gray-700"
-                                />
+                                        </label>
+                                        <input
+                                            type="range"
+                                            id={`stop-${index}`}
+                                            min="0"
+                                            max="100"
+                                            value={gradientValues.stops[index]}
+                                            onChange={(e) => handleInputChange(e, 'stops', index)}
+                                            className="h-3 w-full cursor-pointer appearance-none rounded bg-gray-700"
+                                        />
+                                    </div>
+                                </div>
+                                <button
+                                    onClick={() => handleRemoveColor(index)}
+                                    className="ml-2 rounded bg-red-500 px-2 py-1 font-semibold text-white"
+                                >
+                                    Remove
+                                </button>
                             </div>
                         ))}
                         <div className="flex justify-end">
