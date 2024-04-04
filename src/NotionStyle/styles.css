@@ -333,6 +333,8 @@ img.notion-page-icon {
   white-space: pre-wrap;
   caret-color: rgb(55, 53, 47);
   padding: 3px 2px;
+  font-weight: 200;
+  letter-spacing: 0.6px;
 }
 .notion-block {
   padding: 3px 2px;
