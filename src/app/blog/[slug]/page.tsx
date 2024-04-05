@@ -9,6 +9,8 @@ import { NotionRenderer } from 'react-notion'
 import { BlogPosting, WithContext } from 'schema-dts'
 
 import { BlogPost } from '@/@types/blog'
+import Posts from '@/components/Blog'
+import Title from '@/components/Title'
 import { getAllPosts, getPosts } from '@/utils/api/splitbeeApi'
 import { formateData } from '@/utils/formatDate'
 
@@ -38,8 +40,15 @@ export const generateMetadata = async (
 export default async function PostBlog({ params }: Props) {
     try {
         const posts = await getAllPosts()
+        const filteredPosts = posts.filter((t: BlogPost) => t.slug !== params.slug)
+
+        const maxIndex = Math.max(0, filteredPosts.length - 3)
+        const randomNumber = Math.floor(Math.random() * maxIndex) // Gera um número aleatório dentro da faixa permitida
+        const randomThreePosts = filteredPosts.slice(randomNumber, randomNumber + 3)
+
         const post: BlogPost | undefined = posts.find((t: BlogPost) => t.slug === params.slug)
         const datePost = formateData(post?.date ? post?.date : '2024-02-23')
+
         if (!post) {
             throw new Error(`Page not found`)
         }
@@ -121,6 +130,20 @@ export default async function PostBlog({ params }: Props) {
                                         <span key={tag} className="rounded-full border-[1px] border-solid border-customIndigo/80 bg-customIndigo/20 px-[10px] py-1 text-xs">{tag}</span>
                                     ))
                                 )}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="w-full bg-back">
+                    <div className="container">
+                        <div className="flex">
+                            <div className="my-12 max-lg:my-4">
+                                <Title
+                                    type="h3"
+                                    title="Recent posts" 
+                                    description=""
+                                />
+                                <Posts posts={randomThreePosts} />  
                             </div>
                         </div>
                     </div>
