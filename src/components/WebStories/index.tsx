@@ -1,112 +1,20 @@
-export default function WebStories(){
+import Image from 'next/image'
+import Link from 'next/link'
+
+export default function WbStoriesList() {
     return (
-        <amp-story standalone
-            title="Joy of Pets"
-            publisher="AMP tutorials"
-            publisher-logo-src="assets/AMP-Brand-White-Icon.svg"
-            poster-portrait-src="assets/cover.jpg">
-            <amp-story-page id="cover">
-                <amp-story-grid-layer template="fill">
-                    <amp-img src="assets/cover.jpg"
-                        width="720" height="1280"
-                        layout="responsive">
-                    </amp-img>
-                </amp-story-grid-layer>
-                <amp-story-grid-layer template="vertical">
-                    <h1>The Joy of Pets</h1>
-                    <p>By AMP Tutorials</p>
-                </amp-story-grid-layer>
-            </amp-story-page>
-
-            <amp-story-page id="page1">
-                <amp-story-grid-layer template="vertical">
-                    <h1>Cats</h1>
-                    <amp-img src="assets/cat.jpg"
-                        width="720" height="1280"
-                        layout="responsive">
-                    </amp-img>
-                    <q>Dogs come when they&apos;re called. Cats take a message and get back to you. --Mary Bly</q>
-                </amp-story-grid-layer>
-            </amp-story-page>
-
-            <amp-story-page id="page2">
-                <amp-story-grid-layer template="fill">
-                    <amp-img src="assets/dog.jpg" 
-                        width="720" height="1280"
-                        layout="responsive">
-                    </amp-img>
-                </amp-story-grid-layer>
-                <amp-story-grid-layer template="thirds">
-                    <h1 grid-area="upper-third">Dogs</h1>
-                    <p grid-area="lower-third">Dogs were probably the first tame animals. They have accompanied humans for some 10,000 years. Some scientists assert that all dogs, domestic and wild, share a common ancestor in the small South Asian wolf.</p>
-                </amp-story-grid-layer>
-            </amp-story-page>
-
-            <amp-story-page id="page3" background-audio="assets/bird-singing.mp3">
-                <amp-story-grid-layer template="fill">
-                    <amp-img src="assets/bird.jpg"
-                        width="720" height="1280"
-                        layout="responsive">
-                    </amp-img>
-                </amp-story-grid-layer>
-                <amp-story-grid-layer template="vertical">
-                    <h1>Birds</h1>
-                </amp-story-grid-layer>
-                <amp-story-grid-layer template="vertical" className="bottom">
-                    <q>A bird is three things: Feathers, flight and song, And feathers are the least of these. -Marjorie Allen Seiffert</q>
-                </amp-story-grid-layer>
-            </amp-story-page>
-
-            <amp-story-page id="page4">
-                <amp-story-grid-layer template="fill">
-                    <amp-video autoplay loop
-                        width="720" height="1280"
-                        poster="assets/rabbit.jpg"
-                        layout="responsive">
-                        <source src="assets/rabbit.mp4" type="video/mp4" />
-                    </amp-video>
-                </amp-story-grid-layer>
-                <amp-story-grid-layer template="vertical">
-                    <h1>Rabbits</h1>
-                </amp-story-grid-layer>
-                <amp-story-grid-layer template="vertical" className="bottom">
-                    <p>Rabbits can learn to follow simple voice commands and come when called by name, and are curious and playful.</p>
-                </amp-story-grid-layer>
-            </amp-story-page>
-
-            <amp-story-page id="page5">
-                <amp-story-grid-layer template="vertical" className="noedge">
-                    <div>
-                        <amp-img src="assets/cat.jpg"
-                            width="720" height="1280"
-                            layout="responsive"
-                            animate-in="fade-in"
-                            animate-in-delay="0.4s">
-                        </amp-img>
-                        <amp-img src="assets/dog.jpg"
-                            width="720" height="1280"
-                            layout="responsive"
-                            animate-in="fade-in"
-                            animate-in-delay="0.6s">
-                        </amp-img>
-                        <amp-img src="assets/bird.jpg"
-                            width="720" height="1280"
-                            layout="responsive"
-                            animate-in="fade-in"
-                            animate-in-delay=".8s">
-                        </amp-img>
-                        <amp-img src="assets/rabbit.jpg"
-                            width="720" height="1280"
-                            layout="responsive"
-                            animate-in="fade-in"
-                            animate-in-delay="1s">
-                        </amp-img>
+        <div className="grid grid-cols-4 gap-12 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:gap-8">
+            <Link className="group/item"  href={`/web-stories/key-features-of-next-js`}>
+                <div className="overflow-hidden rounded-xl bg-back-dark">
+                    <figure>
+                        <Image className="h-[400px] w-full object-cover" src="/assets/key-features-of-next-js.jpg" alt="Key Features of Next.js" width={1280} height={720} quality={70}/>
+                    </figure>
+                  
+                    <div className="flex flex-col gap-3 px-6 py-5">
+                        <h2 className="flex items-center bg-gray-200 bg-clip-text text-xl font-bold tracking-wide text-transparent transition-all group-hover/item:bg-gradient-custom max-sm:min-h-0 max-sm:text-lg max-sm:tracking-tight">Key Features of Next.js</h2>
                     </div>
-                </amp-story-grid-layer>
-                <amp-story-grid-layer template="vertical" className="center-text">
-                    <p animate-in="whoosh-in-right">Pets can lower your stress levels!</p>
-                </amp-story-grid-layer>
-            </amp-story-page>
-        </amp-story>
+                </div>
+            </Link>
+        </div>
     )
 }

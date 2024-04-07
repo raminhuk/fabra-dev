@@ -1,14 +1,14 @@
 import AboutMe from '@/components/About'
 import Banner from '@/components/Banner'
+import Layout from '@/components/Layout'
 import Projects from '@/components/Projects'
 import Technologies from '@/components/Technologies'
 import Title from '@/components/Title'
 
 export default function Home() {
     return (
-        <>
+        <Layout>
             <Banner/>
-
             <div className="container">
                 <div className="py-16 max-lg:py-10">
                     <Title
@@ -32,7 +32,7 @@ export default function Home() {
                     <AboutMe />
                 </div>
             </div>
-        </>
+        </Layout>
     
     )
 }

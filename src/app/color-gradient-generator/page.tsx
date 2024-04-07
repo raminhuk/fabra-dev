@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 
+import Layout from '@/components/Layout'
 import ColorGradientGenerator from '@/components/Tools/ColorGradientGenerator'
 
 export const metadata: Metadata = {
@@ -13,8 +14,10 @@ export const metadata: Metadata = {
 
 export default function ColorGradientGeneratorPage() {
     return (
-        <div className="w-full">
-            <ColorGradientGenerator />
-        </div>
+        <Layout>
+            <div className="w-full">
+                <ColorGradientGenerator />
+            </div>
+        </Layout>
     )
 }

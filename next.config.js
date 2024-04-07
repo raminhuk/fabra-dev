@@ -10,7 +10,7 @@ const nextConfig = {
             },
         ],
     },
-    amp: true,
+    amp: 'hybrid',
 }
 
 module.exports = nextConfig

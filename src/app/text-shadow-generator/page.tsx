@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 
+import Layout from '@/components/Layout'
 import TextShadowGenerator from '@/components/Tools/TextShadowGenerator'
 
 export const metadata: Metadata = {
@@ -13,8 +14,10 @@ export const metadata: Metadata = {
 
 export default function TextShadowGeneratorPage() {
     return (
-        <div className="w-full">
-            <TextShadowGenerator />
-        </div>
+        <Layout>
+            <div className="w-full">
+                <TextShadowGenerator />
+            </div>
+        </Layout>
     )
 }

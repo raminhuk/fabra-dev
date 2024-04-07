@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 
+import Layout from '@/components/Layout'
 import Projects from '@/components/Projects'
 import Title from '@/components/Title'
 
@@ -14,17 +15,19 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
     return (
-        <div className="w-full">
-            <div className="container">
-                <div className="my-12 max-lg:my-4">
-                    <Title
-                        type="h1"
-                        title="Projects" 
-                        description="Discover my creative and innovative projects, spanning design to development, and see how I can add value to your next endeavor"
-                    />
-                    <Projects />
+        <Layout>
+            <div className="w-full">
+                <div className="container">
+                    <div className="my-12 max-lg:my-4">
+                        <Title
+                            type="h1"
+                            title="Projects" 
+                            description="Discover my creative and innovative projects, spanning design to development, and see how I can add value to your next endeavor"
+                        />
+                        <Projects />
+                    </div>
                 </div>
             </div>
-        </div>
+        </Layout>
     )
 }

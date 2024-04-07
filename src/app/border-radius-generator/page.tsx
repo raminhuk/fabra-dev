@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 
+import Layout from '@/components/Layout'
 import BorderRadiusGenerator from '@/components/Tools/BorderRadiusGenerator'
 
 export const metadata: Metadata = {
@@ -13,8 +14,10 @@ export const metadata: Metadata = {
 
 export default function BorderRadiusGeneratorPage() {
     return (
-        <div className="w-full">
-            <BorderRadiusGenerator />
-        </div>
+        <Layout>
+            <div className="w-full">
+                <BorderRadiusGenerator />
+            </div>
+        </Layout>
     )
 }

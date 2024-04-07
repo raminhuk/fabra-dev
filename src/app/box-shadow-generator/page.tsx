@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 
+import Layout from '@/components/Layout'
 import BoxShadowGenerator from '@/components/Tools/BoxShadowGenerator'
 
 export const metadata: Metadata = {
@@ -13,8 +14,11 @@ export const metadata: Metadata = {
 
 export default function BoxShadowGeneratorPage() {
     return (
-        <div className="w-full">
-            <BoxShadowGenerator />
-        </div>
+        <Layout>
+       
+            <div className="w-full">
+                <BoxShadowGenerator />
+            </div>
+        </Layout>
     )
 }

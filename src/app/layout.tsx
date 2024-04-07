@@ -5,9 +5,6 @@ import type { Metadata, Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 import Script from 'next/script'
 
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
-
 const poppins = Poppins({ 
     weight: ['300', '400', '500', '600', '700', '800', '900'],
     style: ['normal', 'italic'],
@@ -70,12 +67,8 @@ export default function RootLayout({
         <html lang="en">
             <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4699585166403980"
                 crossOrigin="anonymous" />
-            <Script async src="https://cdn.ampproject.org/v0.js"/>
-            
             <body className={poppins.className}>
-                <Header />
                 {children}
-                <Footer />
             </body>
             <GoogleAnalytics gaId={GA_TRACKING_ID} />
             <GoogleTagManager gtmId={GA_TAGMANAGER_ID} />
