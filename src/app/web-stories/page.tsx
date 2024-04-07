@@ -1,12 +1,15 @@
-import WebStories from '@/components/WebStories'
-export const config = {
-    amp: true,
-}
+import Script from 'next/script'
 
-function WebStoriesPage(){
+import WebStories from '@/components/WebStories'
+
+export default function WebStoriesPage(){
+   
     return (
-        <WebStories />
+        <div>
+            <Script async custom-element="amp-story"
+                src="https://cdn.ampproject.org/v0/amp-story-1.0.js"/>
+            <Script async src="https://cdn.ampproject.org/v0.js"/>
+            <WebStories />
+        </div>
     )
 }
-
-export default WebStoriesPage

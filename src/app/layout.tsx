@@ -70,6 +70,8 @@ export default function RootLayout({
         <html lang="en">
             <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4699585166403980"
                 crossOrigin="anonymous" />
+            <Script async src="https://cdn.ampproject.org/v0.js"/>
+            
             <body className={poppins.className}>
                 <Header />
                 {children}
