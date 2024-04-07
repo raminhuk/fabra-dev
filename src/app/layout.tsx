@@ -55,9 +55,6 @@ export const viewport: Viewport = {
     themeColor: '#0c121e'
 }
 
-export const GA_TRACKING_ID: string = 'G-CSXQC9RNJD'
-export const GA_TAGMANAGER_ID: string = 'GTM-NSVBBRH9'
-
 export default function RootLayout({
     children,
 }: {
@@ -70,8 +67,8 @@ export default function RootLayout({
             <body className={poppins.className}>
                 {children}
             </body>
-            <GoogleAnalytics gaId={GA_TRACKING_ID} />
-            <GoogleTagManager gtmId={GA_TAGMANAGER_ID} />
+            <GoogleAnalytics gaId="G-CSXQC9RNJD" />
+            <GoogleTagManager gtmId="GTM-NSVBBRH9" />
         </html>
     )
 }
