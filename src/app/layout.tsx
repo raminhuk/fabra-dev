@@ -58,6 +58,10 @@ export const viewport: Viewport = {
     themeColor: '#0c121e'
 }
 
+export const config = {
+    amp: true
+}
+
 export const GA_TRACKING_ID: string = 'G-CSXQC9RNJD'
 export const GA_TAGMANAGER_ID: string = 'GTM-NSVBBRH9'
 
