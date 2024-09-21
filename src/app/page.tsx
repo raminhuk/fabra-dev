@@ -1,5 +1,6 @@
 import AboutMe from '@/components/About'
 import Banner from '@/components/Banner'
+import { ContactForm } from '@/components/ContactForm'
 import Layout from '@/components/Layout'
 import Projects from '@/components/Projects'
 import Technologies from '@/components/Technologies'
@@ -30,6 +31,13 @@ export default function Home() {
                         description="Crafting visually stunning and functional experiences - I'm a Frontend Developer passionate about turning ideas into digital reality"
                     />
                     <AboutMe />
+                </div>
+                <div className="hidden py-16 max-lg:py-10">
+                    <Title 
+                        title="Contact" 
+                        description="Get in Touch: Let's Collaborate and Create Something Amazing Together"
+                    />
+                    <ContactForm />
                 </div>
             </div>
         </Layout>

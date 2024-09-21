@@ -9,15 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
     "@next/third-parties": "^14.1.0",
+    "axios": "^1.7.7",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.53.0",
     "react-icons": "^5.0.1",
     "react-notion": "^0.10.0",
     "schema-dts": "^1.1.2",
     "tailwindcss-animated": "^1.0.1",
-    "vanilla-tilt": "^1.8.1"
+    "vanilla-tilt": "^1.8.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@mzrd/eslint-config": "^1.0.26",
