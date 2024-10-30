@@ -1,7 +1,7 @@
 const NOTION_BLOG_ID = process.env.NEXT_PUBLIC_NOTION_BLOG_ID
 
 export const getAllPosts = async () => {
-    const res = await fetch(`https://notion-api.splitbee.io/v1/table/${NOTION_BLOG_ID}`,
+    const res = await fetch(`https://worker-notion.fabioraminhuk.workers.dev/v1/table/${NOTION_BLOG_ID}`,
         { next: { revalidate: 3000 }}
     )
     const posts = await res.json()
@@ -9,7 +9,7 @@ export const getAllPosts = async () => {
 }
 
 export const getPosts = async (id: string) => {
-    const res = await fetch(`https://notion-api.splitbee.io/v1/page/${id}`,
+    const res = await fetch(`https://worker-notion.fabioraminhuk.workers.dev/v1/page/${id}`,
         { next: { revalidate: 3000 } }
     )
     const post = await res.json()
