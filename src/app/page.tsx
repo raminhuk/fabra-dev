@@ -32,12 +32,14 @@ export default function Home() {
                     />
                     <AboutMe />
                 </div>
-                <div className="hidden py-16 max-lg:py-10">
-                    <Title 
-                        title="Contact" 
-                        description="Get in Touch: Let's Collaborate and Create Something Amazing Together"
-                    />
-                    <ContactForm />
+                <div className="flex items-center justify-center py-16 max-lg:py-10">
+                    <div className="max-w-[600px]" >
+                        <Title 
+                            title="Contact" 
+                            description="Get in Touch: Let's Collaborate and Create Something Amazing Together"
+                        />
+                        <ContactForm />
+                    </div>
                 </div>
             </div>
         </Layout>
