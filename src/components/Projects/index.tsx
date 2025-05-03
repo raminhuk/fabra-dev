@@ -11,7 +11,7 @@ export default function Projects() {
                 <div key={i} className="rounded-lg bg-gradient-custom p-[1px]">
                     <div className=" rounded-lg bg-back p-8 max-lg:p-6 max-xs:p-4">
                         <figure>
-                            <Image className="rounded" src={item.image}  width={1600} height={900} alt={item.title}/>
+                            <Image className="rounded" src={item.image} width={1600} height={900} alt={item.title} />
                         </figure>
                         <div className="min-h-72 pb-2 pt-6 max-sm:min-h-[10px] max-sm:pt-4">
                             <h3 className="pb-3 text-2xl font-semibold max-lg:text-xl">{item.title}</h3>
@@ -27,7 +27,9 @@ export default function Projects() {
                             {item.linkPreview && (
                                 <Link className="flex-1 grow-[0.8] rounded-full bg-gradient-custom px-2 py-4 text-center text-sm shadow-md shadow-blue-500/50 transition-all hover:shadow-lg hover:shadow-blue-500/50 max-lg:p-3 max-lg:text-xs" target="_blank" href={item.linkPreview}>Live preview</Link>
                             )}
-                            <Link className="flex-1 rounded-full border border-white px-2 py-4 text-center text-sm transition-all duration-200 ease-in hover:bg-white hover:text-back max-lg:p-3 max-lg:text-xs" target="_blank" href={item.linkGithub}>Check on GitHub</Link>
+                            {item.linkGithub && (
+                                <Link className="flex-1 rounded-full border border-white px-2 py-4 text-center text-sm transition-all duration-200 ease-in hover:bg-white hover:text-back max-lg:p-3 max-lg:text-xs" target="_blank" href={item.linkGithub}>Check on GitHub</Link>
+                            )}
                         </div>
                     </div>
                 </div>

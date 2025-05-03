@@ -5,11 +5,19 @@ type projectsProps = {
     image: string;
     tech: string[];
     linkPreview?: string;
-    linkGithub: string;
+    linkGithub?: string;
 }
 
 
 export const projectsData: projectsProps[] = [
+    {
+        title: 'DevShowCase.dev - Showcase your developer profile',
+        description: 'A platform for developers to highlight their work and connect with opportunities.',
+        image: '/images/projects/devshowcase.png',
+        tech: ['Next', 'TypeScript', 'Prisma', 'PostgreSQL', 'Stripe', 'Tailwind'],
+        linkPreview: 'https://devshowcase.dev',
+        // linkGithub: 'https://github.com/raminhuk/tudocuriosidade.com.br'
+    },
     {
         title: 'Tudo Curiosidade AI-generated curiosity website',
         description: 'Discover fascinating AI-generated curiosities! Our site, built with Next.js and Tailwind',
@@ -81,6 +89,6 @@ export const projectsData: projectsProps[] = [
         linkPreview: 'https://tic-tac-toe.fabra.dev',
         linkGithub: 'https://github.com/raminhuk/tic-tac-toe'
     },
-   
-    
+
+
 ]
