@@ -13,17 +13,24 @@ export const projectsData: projectsProps[] = [
     {
         title: 'DevShowCase.dev - Showcase your developer profile',
         description: 'A platform for developers to highlight their work and connect with opportunities.',
-        image: '/images/projects/devshowcase.png',
+        image: '/images/projects/devshowcase2.png',
         tech: ['Next', 'TypeScript', 'Prisma', 'PostgreSQL', 'Stripe', 'Tailwind'],
         linkPreview: 'https://devshowcase.dev',
-        // linkGithub: 'https://github.com/raminhuk/tudocuriosidade.com.br'
+    },
+    {
+        'title': 'FocusFlow: Your Customizable Pomodoro Timer',
+        'description': 'Boost your productivity and maintain focus with this Pomodoro timer built with the latest web technologies. ',
+        'image': '/images/projects/pomodoro.png',
+        'tech': ['React', 'TypeScript', 'Tailwind', 'Vite'],
+        'linkPreview': 'https://pomodoro.fabra.dev',
+        'linkGithub': 'https://github.com/raminhuk/pomodoro'
     },
     {
         title: 'Tudo Curiosidade AI-generated curiosity website',
         description: 'Discover fascinating AI-generated curiosities! Our site, built with Next.js and Tailwind',
         image: '/images/projects/tudocuriosidade.png',
         tech: ['Next', 'TypeScript', 'Notion', 'Tailwind', 'Generative AI'],
-        linkPreview: 'https://tudocuriosidade.com.br',
+        linkPreview: 'https://tudocuriosidadefabra.dev',
         linkGithub: 'https://github.com/raminhuk/tudocuriosidade.com.br'
     },
     {
