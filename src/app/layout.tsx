@@ -5,7 +5,7 @@ import type { Metadata, Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 import Script from 'next/script'
 
-const poppins = Poppins({ 
+const poppins = Poppins({
     weight: ['300', '400', '500', '600', '700', '800', '900'],
     style: ['normal', 'italic'],
     subsets: ['latin'],
@@ -13,9 +13,9 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
     manifest: 'https://fabra.dev/manifest.json',
-    title: 'Fabio J. Raminhuk - Frontend Developer',
-    description: 'Turning Ideas into Digital Reality: Fabio J.R, a Frontend Developer passionate about crafting elegant and functional interfaces to deliver exceptional user experiences',
-    keywords: ['Frontend Developer', 'Web Developer', 'HTML', 'CSS',
+    title: 'Fabio J. Raminhuk - Fullstack Developer',
+    description: 'Turning ideas into digital reality: Fabio J.R, a Fullstack Developer building end-to-end solutions with elegant frontends and reliable backends to deliver outstanding user experiences.',
+    keywords: ['Frontend Developer', 'Web Developer', 'HTML', 'CSS', 'FullStack', 'Fullstack Developer',
         'JavaScript', 'React', 'Vue.js', 'Angular', 'UI/UX Design', 'Responsiveness', 'Web Accessibility', 'SEO', 'Web Performance', 'Frontend Development', 'Programming', 'Git', 'GitHub', 'Online Portfolio', 'Development Blog'
     ],
     icons: {
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     openGraph: {
         type: 'website',
         url: 'fabra.dev',
-        title: 'Fabio J. Raminhuk - Frontend Developer',
-        description: 'Turning Ideas into Digital Reality: Fabio J.R, a Frontend Developer passionate about crafting elegant and functional interfaces to deliver exceptional user experiences',
+        title: 'Fabio J. Raminhuk - Fullstack Developer',
+        description: 'Turning ideas into digital reality: Fabio J.R, a Fullstack Developer building end-to-end solutions with elegant frontends and reliable backends to deliver outstanding user experiences.',
         siteName: 'My Website',
         images: [{
             url: 'https://raw.githubusercontent.com/raminhuk/fabra-dev/master/public/images/frontend-developer.png',
@@ -55,6 +55,9 @@ export const viewport: Viewport = {
     themeColor: '#0c121e'
 }
 
+const GA = process.env.NEXT_PUBLIC_GA || ''
+const GTM = process.env.NEXT_PUBLIC_GTM || ''
+
 export default function RootLayout({
     children,
 }: {
@@ -67,8 +70,8 @@ export default function RootLayout({
             <body className={poppins.className}>
                 {children}
             </body>
-            <GoogleAnalytics gaId="G-CSXQC9RNJD" />
-            <GoogleTagManager gtmId="GTM-NSVBBRH9" />
+            <GoogleAnalytics gaId={GA} />
+            <GoogleTagManager gtmId={GTM} />
         </html>
     )
 }
